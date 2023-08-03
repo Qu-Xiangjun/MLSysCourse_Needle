@@ -80,8 +80,6 @@ void Fill(CudaArray* out, scalar_t val) {
 // Untility function to convert contiguous index i to memory location from strides
 
 
-
-
 __global__ void CompactKernel(const scalar_t* a, scalar_t* out, size_t size, CudaVec shape,
                               CudaVec strides, size_t offset) {
   /**
