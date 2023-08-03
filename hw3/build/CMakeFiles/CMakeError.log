@@ -1,0 +1,65 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_41fc4/fast && make[1]: Entering directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3'
+/usr/bin/make  -f CMakeFiles/cmTC_41fc4.dir/build.make CMakeFiles/cmTC_41fc4.dir/build
+make[2]: Entering directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3'
+Building C object CMakeFiles/cmTC_41fc4.dir/src.c.o
+/usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIC  -o CMakeFiles/cmTC_41fc4.dir/src.c.o -c /content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3/src.c
+Linking C executable cmTC_41fc4
+/usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_41fc4.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC  -rdynamic CMakeFiles/cmTC_41fc4.dir/src.c.o -o cmTC_41fc4 
+/usr/bin/ld: CMakeFiles/cmTC_41fc4.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x5e): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x6f): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_41fc4.dir/build.make:99: cmTC_41fc4] Error 1
+make[2]: Leaving directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3'
+make[1]: *** [Makefile:127: cmTC_41fc4/fast] Error 2
+make[1]: Leaving directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-epZOg3'
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_ec824/fast && make[1]: Entering directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4'
+/usr/bin/make  -f CMakeFiles/cmTC_ec824.dir/build.make CMakeFiles/cmTC_ec824.dir/build
+make[2]: Entering directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4'
+Building C object CMakeFiles/cmTC_ec824.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_ec824.dir/CheckFunctionExists.c.o -c /content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4/CheckFunctionExists.c
+Linking C executable cmTC_ec824
+/usr/local/lib/python3.10/dist-packages/cmake/data/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ec824.dir/link.txt --verbose=1
+/usr/bin/cc -fPIC -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_ec824.dir/CheckFunctionExists.c.o -o cmTC_ec824  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[2]: *** [CMakeFiles/cmTC_ec824.dir/build.make:99: cmTC_ec824] Error 1
+make[2]: Leaving directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4'
+make[1]: *** [Makefile:127: cmTC_ec824/fast] Error 2
+make[1]: Leaving directory '/content/drive/MyDrive/10714/hw3/build/CMakeFiles/CMakeScratch/TryCompile-QWRDa4'
+
+
+
