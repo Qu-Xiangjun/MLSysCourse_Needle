@@ -23,9 +23,19 @@ class SGD(Optimizer):
         self.weight_decay = weight_decay
 
     def step(self):
-        ### BEGIN YOUR SOLUTION
-        raise NotImplementedError()
-        ### END YOUR SOLUTION
+        for param in self.params:
+            # param grad maybe None
+            if param.grad is None:
+                continue
+            # Init the u
+            if self.u.get(param, None) is None:
+                self.u[param] = ndl.init.zeros(*param.shape)
+            # Compute current u with momentum, last u, grad and weight decay
+            grad = self.momentum * self.u[param] + (1 - self.momentum) * \
+                   (param.grad + self.weight_decay * param)
+            self.u[param] = ndl.Tensor(grad, dtype=param.type, requires_grad=False)
+            # Update the param
+            param.data -= self.lr * self.u[param]
 
 
 class Adam(Optimizer):
@@ -50,6 +60,26 @@ class Adam(Optimizer):
         self.v = {}
 
     def step(self):
-        ### BEGIN YOUR SOLUTION
-        raise NotImplementedError()
-        ### END YOUR SOLUTION
+        self.t += 1
+        for p in self.params:
+            if p is None:
+                continue
+            if self.m.get(p, None) is None:
+                self.m[p] = ndl.init.zeros(*p.shape)
+            if self.v.get(p, None) is None:
+                self.v[p] = ndl.init.zeros(*p.shape)
+            
+            # Notice the weight decay
+            grad_data = p.grad.detach() + p.detach() * self.weight_decay
+
+            self.m[p] = self.beta1 * self.m[p] + (1 - self.beta1) * grad_data
+            self.v[p] = self.beta2 * self.v[p] + (1 - self.beta2) * (grad_data ** 2)
+
+            m_hat = self.m[p] / (1 - self.beta1 ** self.t) 
+            v_hat = self.v[p] / (1 - self.beta2 ** self.t) 
+
+            theta = self.lr * m_hat / (v_hat ** 0.5 + self.eps)
+
+            p.data = p.data - ndl.Tensor(
+                theta, dtype=p.dtype, requires_grad=False
+            )  # outofmemory now

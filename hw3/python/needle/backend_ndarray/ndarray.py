@@ -298,7 +298,8 @@ class NDArray:
                "[Error NDArray] Require same dimention for shape."
         new_strides = list(self.strides)
         for i, d in enumerate(self.shape):
-            assert d == 1 or new_shape[i] == d
+            assert d == 1 or new_shape[i] == d,  \
+               "[Error NDArray] Require same shape or 1 in every position."
             if d == 1:
                 new_strides[i] = 0
         return self.as_strided(new_shape, new_strides)
@@ -551,37 +552,42 @@ class NDArray:
             return out
 
     ### Reductions, i.e., sum/max over all element or over given axis
-    def reduce_view_out(self, axis):
+    def reduce_view_out(self, axis, keepdims = False):
         """ 
         Return a view to the array set up for reduction functions and output array. 
         Which simplize the function work by permute array, that make the axis become
         last dimension.
         """
+        if isinstance(axis, tuple) and not axis:
+            axis = None
+
         if axis is None:
             # view is the self converted to (1, 1, ..., prod(self.shape)), which 
             # indicates the multimensional shape but only last dimension have 
             # all elements.
             view = self.reshape((1,) * (self.ndim - 1) + (prod(self.shape),)) 
             # Create a null array out which dimentions is same to view.
-            out = NDArray.make((1,) * self.ndim, device=self.device) 
+            out = NDArray.make((1,) * (self.ndim if keepdims else 1), device=self.device) 
         else:
             # Convert the dimension of axis to be the last dimension by permute array. 
             view = self.permute(
                 tuple([a for a in range(self.ndim) if a != axis]) + (axis,)
             )
             out = NDArray.make( # Only sum axis dimension become 1 for out array.
-                tuple([1 if i == axis else s for i, s in enumerate(self.shape)]),
+                tuple([1 if i == axis else s for i, s in enumerate(self.shape)])
+                if keepdims else
+                tuple([s for i, s in enumerate(self.shape) if i != axis]),
                 device=self.device,
             ) 
         return view, out
 
-    def sum(self, axis=None):
-        view, out = self.reduce_view_out(axis)
+    def sum(self, axis=None, keepdims=False):
+        view, out = self.reduce_view_out(axis, keepdims=keepdims)
         self.device.reduce_sum(view.compact()._handle, out._handle, view.shape[-1])
         return out
 
-    def max(self, axis=None):
-        view, out = self.reduce_view_out(axis)
+    def max(self, axis=None, keepdims=False):
+        view, out = self.reduce_view_out(axis, keepdims=keepdims)
         self.device.reduce_max(view.compact()._handle, out._handle, view.shape[-1])
         return out
 
@@ -603,5 +609,41 @@ def full(shape, fill_value, dtype="float32", device=None):
     return device.full(shape, fill_value, dtype)
 
 
-def broadcast_to(array, new_shape):
+def broadcast_to(array: NDArray, new_shape):
     return array.broadcast_to(new_shape)
+
+
+def reshape(array: NDArray, new_shape):
+    return array.reshape(new_shape)
+
+
+def maximum(a: NDArray, b: NDArray):
+    return a.maximum(b)
+
+
+def log(a: NDArray):
+    return a.log()
+
+
+def exp(a: NDArray):
+    return a.exp()
+
+
+def tanh(a: NDArray):
+    return a.tanh()
+
+
+# def flip(a, axes):
+#     return a.flip(axes)
+
+
+def summation(a: NDArray, axis=None, keepdims=False):
+    return a.sum(axis=axis, keepdims=keepdims)
+
+
+def matmul(a: NDArray, b: NDArray):
+    return a @ b
+
+
+def max(a: NDArray, axis=None, keepdims=False):
+    return a.max(axis=axis, keepdims=keepdims)

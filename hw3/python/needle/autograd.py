@@ -1,9 +1,9 @@
-
 """Core data structures."""
 import needle
 from typing import List, Optional, NamedTuple, Tuple, Union
 from collections import namedtuple
 import numpy
+from needle import init
 
 # needle version
 LAZY_MODE = False
@@ -61,7 +61,8 @@ class Op:
 
 
 class TensorOp(Op):
-    """ Op class specialized to output tensors, will be alternate subclasses for other structures """
+    """ Op class specialized to output tensors, 
+    will be alternate subclasses for other structures """
 
     def __call__(self, *args):
         return Tensor.make_from_op(self, args)
@@ -80,10 +81,9 @@ class Value:
     # trace of computational graph
     op: Optional[Op]
     inputs: List["Value"]
-    # The following fields are cached fields for
-    # dynamic computation
-    cached_data: NDArray
-    requires_grad: bool
+    # The following fields are cached fields for dynamic computation.
+    cached_data: NDArray # Tensor value, which is computed by op and inputs.
+    requires_grad: bool  # Is need to auto grad compute.
 
     def realize_cached_data(self):
         """Run compute to realize the cached data"""
@@ -146,7 +146,6 @@ class Value:
         return value
 
 
-### Not needed in HW1
 class TensorTuple(Value):
     """Represent a tuple of tensors.
     To keep things simple, we do not support nested tuples.
@@ -221,6 +220,7 @@ class Tensor(Value):
 
     @staticmethod
     def make_from_op(op: Op, inputs: List["Value"]):
+        """Compute the tensor of computational graph by op and inpyts list."""
         tensor = Tensor.__new__(Tensor)
         tensor._init(op, inputs)
         if not LAZY_MODE:
@@ -231,28 +231,33 @@ class Tensor(Value):
 
     @staticmethod
     def make_const(data, requires_grad=False):
+        """Make the const tensor node, bot operations to compute graph node, 
+        which contains op and inputs."""
         tensor = Tensor.__new__(Tensor)
         tensor._init(
             None,
             [],
             cached_data=data
-            if not isinstance(data, Tensor)
-            else data.realize_cached_data(),
+                if not isinstance(data, Tensor)
+                else data.realize_cached_data(),
             requires_grad=requires_grad,
         )
         return tensor
 
     @property
     def data(self):
+        """Get the data which only have value,not computational graph node."""
         return self.detach()
 
     @data.setter
     def data(self, value):
+        """Change the value by a tensor prameter."""
         assert isinstance(value, Tensor)
-        assert value.dtype == self.dtype, "%s %s" % (
-            value.dtype,
-            self.dtype,
-        )
+        assert value.dtype == self.dtype,  \
+            "[ERROR Tensor] value.dtype %s different from %s" % (
+                value.dtype,
+                self.dtype,
+            )
         self.cached_data = value.realize_cached_data()
 
     def detach(self):
@@ -308,9 +313,10 @@ class Tensor(Value):
             return needle.ops.MulScalar(other)(self)
 
     def __pow__(self, other):
-        ### BEGIN YOUR SOLUTION
-        raise NotImplementedError()
-        ### END YOUR SOLUTION
+        if isinstance(other, Tensor):
+            raise NotImplementedError()
+        else:
+            return needle.ops.PowerScalar(other)(self)
 
     def __sub__(self, other):
         if isinstance(other, Tensor):
@@ -332,6 +338,9 @@ class Tensor(Value):
 
     def sum(self, axes=None):
         return needle.ops.Summation(axes)(self)
+    
+    def max(self, axes = None):
+        return needle.ops.Max(axes)(self)
 
     def broadcast_to(self, shape):
         return needle.ops.BroadcastTo(shape)(self)
@@ -344,6 +353,13 @@ class Tensor(Value):
 
     def transpose(self, axes=None):
         return needle.ops.Transpose(axes)(self)
+
+    def log(self):
+        return needle.ops.Log()(self)
+
+    def exp(self):
+        return needle.ops.Exp()(self)
+
 
     __radd__ = __add__
     __rmul__ = __mul__
@@ -362,12 +378,24 @@ def compute_gradient_of_variables(output_tensor, out_grad):
     # instead of the vector output_node. But this is the common case for loss function.
     node_to_output_grads_list[output_tensor] = [out_grad]
 
-    # Traverse graph in reverse topological order given the output_node that we are taking gradient wrt.
+    # Traverse graph in reverse topological order given the output_node 
+    # that we are taking gradient wrt.
     reverse_topo_order = list(reversed(find_topo_sort([output_tensor])))
 
-    ### BEGIN YOUR SOLUTION
-    raise NotImplementedError()
-    ### END YOUR SOLUTION
+    # Traverse graph by reversed post-order compute node's gradient sum from each
+    # output node's gradient contribution. Then compute current node's gradient
+    # for each input nodes.
+    for node in reverse_topo_order:
+        node.grad = sum_node_list(node_to_output_grads_list[node])
+
+        if(node.is_leaf()):
+            continue
+
+        for i, grad in enumerate(node.op.gradient_as_tuple(node.grad, node)):
+            in_node = node.inputs[i]
+            if in_node not in node_to_output_grads_list:
+                node_to_output_grads_list[in_node] = []
+            node_to_output_grads_list[in_node].append(grad)
 
 
 def find_topo_sort(node_list: List[Value]) -> List[Value]:
@@ -377,16 +405,27 @@ def find_topo_sort(node_list: List[Value]) -> List[Value]:
     after all its predecessors are traversed due to post-order DFS, we get a topological
     sort.
     """
-    ### BEGIN YOUR SOLUTION
-    raise NotImplementedError()
-    ### END YOUR SOLUTION
+    visited = set()
+    topo_order = list()
+    for node in node_list:
+        topo_sort_dfs(node, visited, topo_order)
+    return topo_order
 
 
 def topo_sort_dfs(node, visited, topo_order):
     """Post-order DFS"""
-    ### BEGIN YOUR SOLUTION
-    raise NotImplementedError()
-    ### END YOUR SOLUTION
+    # First check is visited.
+    if node in visited:
+        return
+
+    visited.add(node)
+    # Recursive depth traversal for each inputs node.
+    for i in node.inputs:
+        if i not in visited:
+            topo_sort_dfs(i, visited, topo_order)
+    
+    # Add current node after all the inputs node added.
+    topo_order.append(node)
 
 
 ##############################
