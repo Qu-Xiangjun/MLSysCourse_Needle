@@ -108,7 +108,7 @@ __global__ void CompactKernel(
   {
     size_t pos_a = 0;
     size_t tmp = gid;
-    for(size_t i = shape.size - 1; i != 0; i--)
+    for(int i = shape.size - 1; i >= 0; i--)
     {
       pos_a += (tmp % shape.data[i]) * strides.data[i];
       tmp /= shape.data[i];
@@ -152,7 +152,7 @@ __global__ void EwiseSetitemKernl(
   if(gid < size) {
     size_t pos_out = 0;
     size_t tmp = gid;
-    for (size_t i = shape.size - 1; i != 0; i--)
+    for (int i = shape.size - 1; i >= 0; i--)
     {
       pos_out += (tmp % shape.data[i]) * strides.data[i]; 
       tmp /= shape.data[i];
@@ -191,7 +191,7 @@ __global__ void ScalarSetitemKernl(
   if(gid < size) {
     size_t pos_out = 0;
     size_t tmp = gid;
-    for (size_t i = shape.size - 1; i != 0; i--)
+    for (int i = shape.size - 1; i >= 0; i--)
     {
       pos_out += (tmp % shape.data[i]) * strides.data[i]; 
       tmp /= shape.data[i];
@@ -270,33 +270,21 @@ template <typename F> __global__ void EwiseFunc(
   const scalar_t* a, const scalar_t* b, scalar_t* out, size_t size, F f
 ) {
   size_t gid = blockIdx.x * blockDim.x + threadIdx.x;
-  if (gid < size) 
-    for (size_t i = 0; i < size; i++)
-    {
-      out[gid] = f(a[gid], b[gid]);
-    }
+  if (gid < size) out[gid] = f(a[gid], b[gid]);
 }
 
 template <typename F> __global__ void EwiseFunc(
   const scalar_t* a, scalar_t* out, size_t size, F f
 ) {
   size_t gid = blockIdx.x * blockDim.x + threadIdx.x;
-  if (gid < size) 
-    for (size_t i = 0; i < size; i++)
-    {
-      out[i] = f(a[i]);
-    }
+  if (gid < size) out[gid] = f(a[gid]);
 }
 
 template <typename F> __global__ void ScalarFunc(
   const scalar_t* a, scalar_t val, scalar_t* out, size_t size, F f
 ) {
   size_t gid = blockIdx.x * blockDim.x + threadIdx.x;
-  if (gid < size) 
-    for (size_t i = 0; i < size; i++)
-    {
-      out[i] = f(a[i], val);
-    }
+  if (gid < size) out[gid] = f(a[gid], val);
 }
 
 
