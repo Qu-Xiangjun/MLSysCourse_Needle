@@ -410,6 +410,7 @@ void ReduceMax(const AlignedArray& a, AlignedArray* out, size_t reduce_size) {
       if (a.ptr[i * reduce_size + j] > max)
         max = a.ptr[i * reduce_size + j];
     }
+    out->ptr[i] = max;
   }
 }
 

@@ -102,7 +102,7 @@ class NDArray:
     """
 
     def __init__(self, other, device=None):
-        """ Create by copying another NDArray, or from numpy """
+        """ Create by copying `another NDArray`, or from `numpy` """
         if isinstance(other, NDArray):
             # create a copy of existing NDArray
             if device is None:
@@ -122,15 +122,18 @@ class NDArray:
             self._init(array)
 
     def _init(self, other):
+        # Create current ndarray five fields from another NDArray.
         self._shape = other._shape
         self._strides = other._strides
         self._offset = other._offset
         self._device = other._device
         self._handle = other._handle # A memory address point for 1D array in backend.
 
+   
+    """ Utils function """
     @staticmethod
     def compact_strides(shape):
-        """ Utility function to compute compact strides by shape."""
+        """Utility function to compute compact strides by shape."""
         stride = 1
         res = []
         for i in range(1, len(shape) + 1):
@@ -140,21 +143,22 @@ class NDArray:
 
     @staticmethod
     def make(shape, strides=None, device=None, handle=None, offset=0):
-        """Create a new NDArray with the given properties.  This will allocation the
-        memory if handle=None, otherwise it will use the handle of an existing
+        """Create a new NDArray with the given properties. This will `allocation the
+        memory` if handle=None, otherwise it will use the handle of an existing
         array."""
         array = NDArray.__new__(NDArray) # Instantiate a NDArray class by call __init__.
         array._shape = tuple(shape)
         array._strides = NDArray.compact_strides(shape) if strides is None else strides
         array._offset = offset
         array._device = device if device is not None else default_device()
-        if handle is None: # Need create a new memory area.
+        if handle is None: # Need create a new memory area by <Device API>.
             array._handle = array.device.Array(prod(shape)) # prod(shape) means the size.
         else: # Point a created memory area. 
             array._handle = handle
         return array
 
 
+    """ Properties of NDArray """
     ### Properies and string representations
     @property
     def shape(self):
@@ -170,7 +174,7 @@ class NDArray:
 
     @property
     def dtype(self):
-        """ only support float32 for now."""
+        """NOTE: only support float32 for now."""
         return "float32"
 
     @property
@@ -189,9 +193,9 @@ class NDArray:
         return self.numpy().__str__()
 
 
-    ### Basic array manipulation
+    """ Basic array manipulation """ 
     def fill(self, value):
-        """ Fill (in place) with a constant value. """
+        """ <Device API> Fill (in place) with a constant value. """
         self._device.fill(self._handle, value)
 
     def to(self, device):
@@ -202,7 +206,7 @@ class NDArray:
             return NDArray(self.numpy(), device=device)
 
     def numpy(self):
-        """ convert to a numpy array """
+        """ <Device API> convert to a numpy array """
         return self.device.to_numpy(
             self._handle, self.shape, self.strides, self._offset
         )
@@ -216,7 +220,7 @@ class NDArray:
         )
 
     def compact(self):
-        """ Convert a matrix to be compact. """
+        """ <Device API> Convert a matrix to be compact. """
         if self.is_compact():
             return self
         else:
@@ -301,15 +305,18 @@ class NDArray:
             assert d == 1 or new_shape[i] == d,  \
                "[Error NDArray] Require same shape or 1 in every position."
             if d == 1:
-                new_strides[i] = 0
-        return self.as_strided(new_shape, new_strides)
+                new_strides[i] = 0 
+        return self.as_strided(new_shape, tuple(new_strides))
 
 
-    ### Get and set elements
+    """ Get and set elements. Slice. """
     def process_slice(self, sl, dim):
         """ 
         Convert a slice to an explicit start/stop/step.
         We only support positive strides and that kind of thing.
+        Args:
+            sl (slice objetc): a slice object
+            dim (int): slice in this dimention
         """
         # Init the iteration variate of the slice.
         start, stop, step = sl.start, sl.stop, sl.step
@@ -380,15 +387,15 @@ class NDArray:
             new_offset += self.strides[i] * sli.start
             new_shape[i] = math.ceil((sli.stop - sli.start) / sli.step)
             new_strides[i] = self.strides[i] * sli.step
-        return NDArray.make(
+        return NDArray.make( # Slice from same memory address.
             tuple(new_shape), tuple(new_strides), self.device, self._handle, new_offset
         )
 
     def __setitem__(self, idxs, other):
-        """Set the values of a view into an array, using the same semantics
+        """<Device API> Set the values of a view into an array, using the same semantics
         as __getitem__()."""
-        view = self.__getitem__(idxs)
-        if isinstance(other, NDArray):
+        view = self.__getitem__(idxs) # Get memory of current array.
+        if isinstance(other, NDArray): # Set item by NDArray
             assert prod(view.shape) == prod(other.shape), \
                    "[Error NDArray] Size of the array must same."
             self.device.ewise_setitem(
@@ -398,7 +405,7 @@ class NDArray:
                 view.strides,
                 view._offset,
             )
-        else:
+        else: # Set item by a scalar.
             self.device.scalar_setitem(
                 prod(view.shape),
                 other,
@@ -409,6 +416,7 @@ class NDArray:
             )
 
 
+    """ Basic alculation operation by <Device API> """
     ### Collection of elementwise and scalar function: add, multiply, boolean, etc
     def ewise_or_scalar(self, other, ewise_func, scalar_func):
         """Run either an element-wise or scalar version of a function,
@@ -479,8 +487,8 @@ class NDArray:
     def __le__(self, other):
         return 1 - (self > other)
 
-    ### Elementwise functions
 
+    ### Elementwise functions
     def log(self):
         out = NDArray.make(self.shape, device=self.device)
         self.device.ewise_log(self.compact()._handle, out._handle)
@@ -551,8 +559,8 @@ class NDArray:
             )
             return out
 
-    ### Reductions, i.e., sum/max over all element or over given axis
-    def reduce_view_out(self, axis, keepdims = False):
+    ### Reductions utils function, i.e., sum/max over all element or over given axis
+    def reduce_view_out(self, axis, keepdims=False):
         """ 
         Return a view to the array set up for reduction functions and output array. 
         Which simplize the function work by permute array, that make the axis become
@@ -592,6 +600,7 @@ class NDArray:
         return out
 
 
+""" Global function. Handle the NDArray as args. """
 def array(a, dtype="float32", device=None):
     """ Convenience methods to match numpy a bit more closely."""
     dtype = "float32" if dtype is None else dtype
