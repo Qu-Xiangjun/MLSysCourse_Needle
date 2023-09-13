@@ -1,21 +1,23 @@
 import setuptools
 
+print(setuptools.find_packages())
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="needleTensor",
-    version="0.0.1",
+    version="0.0.5",
     author="Xiangjun Qu",
     author_email="quxiangjun@mail.ustc.edu.cn",
     description="A mini pytorch, which contains necessary element if deep learning framwork.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Xiangjun-Qu/NeedleTensor",
-    packages=setuptools.find_packages("needle"),
+    packages=setuptools.find_packages(),
     install_requires=['numpy'],
     package_data={
-        'needle.backend_ndarray': [],  # 包含所有 .so 文件
+        'needle.backend_ndarray': ["*.so"],  # 包含所有 .so 文件
     },
     classifiers = [
     "Development Status :: 3 - Alpha",           # 开发状态 (Alpha, Beta, Production/Stable)

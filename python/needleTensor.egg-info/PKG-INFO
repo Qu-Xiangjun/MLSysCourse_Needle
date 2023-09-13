@@ -1,12 +1,10 @@
 Metadata-Version: 2.1
 Name: needleTensor
-Version: 0.0.1
+Version: 0.0.5
 Summary: A mini pytorch, which contains necessary element if deep learning framwork.
 Home-page: https://github.com/Xiangjun-Qu/NeedleTensor
 Author: Xiangjun Qu
 Author-email: quxiangjun@mail.ustc.edu.cn
-License: UNKNOWN
-Platform: UNKNOWN
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
@@ -18,8 +16,8 @@ Classifier: Programming Language :: Python :: 3.11
 Classifier: Topic :: Software Development :: Libraries
 Classifier: Topic :: Utilities
 Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
 
 NeedleTensor from CMU 10-714 homework.
-
-
 

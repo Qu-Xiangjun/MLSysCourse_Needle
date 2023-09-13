@@ -1,0 +1,21 @@
+include LICENSE
+include READEME.md
+
+# 递归地包含所有Python文件
+recursive-include needle *.py
+
+# 递归地包含所有模板文件
+# recursive-include your_package_name/templates *
+
+# 递归地包含所有静态文件
+recursive-include needle/backend_ndarray *.so
+
+# 排除所有__pycache__目录
+global-exclude __pycache__
+
+# 排除所有.pyc文件
+global-exclude *.pyc
+
+# 包含或排除prune所有测试文件
+recursive-include tests/
+# prune tests/
