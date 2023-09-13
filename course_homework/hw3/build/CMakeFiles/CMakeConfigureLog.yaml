@@ -4,20 +4,20 @@ events:
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineSystem.cmake:211 (message)"
       - "CMakeLists.txt:2 (project)"
     message: |
-      The system is: Linux - 6.2.0-32-generic - x86_64
+      The system is: Linux - 5.15.0-56-generic - x86_64
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-      Compiler: /usr/bin/cc 
+      Compiler: /root/miniconda3/envs/python310/bin/cc 
       Build flags: 
       Id flags:  
       
@@ -28,18 +28,18 @@ events:
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
       
       The C compiler identification is GNU, found in:
-        /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/3.26.4/CompilerIdC/a.out
+        /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/3.27.4/CompilerIdC/a.out
       
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-      Compiler: /usr/bin/c++ 
+      Compiler: /root/miniconda3/envs/python310/bin/c++ 
       Build flags: 
       Id flags:  
       
@@ -50,19 +50,19 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
       
       The CXX compiler identification is GNU, found in:
-        /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/3.26.4/CompilerIdCXX/a.out
+        /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/3.27.4/CompilerIdCXX/a.out
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv"
-      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv"
+      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7"
+      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -70,239 +70,219 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv
+        Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7'
         
-        Run Build Command(s):/root/miniconda3/envs/tvm-build/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_77426/fast && gmake[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv'
-        /usr/bin/gmake  -f CMakeFiles/cmTC_77426.dir/build.make CMakeFiles/cmTC_77426.dir/build
-        gmake[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv'
-        Building C object CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -v -o CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -c /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCCompilerABI.c
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/cc
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0e4cd/fast
+        make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7'
+        /usr/bin/make  -f CMakeFiles/cmTC_0e4cd.dir/build.make CMakeFiles/cmTC_0e4cd.dir/build
+        make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7'
+        Building C object CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o
+        /root/miniconda3/envs/python310/bin/cc   -v -o CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -c /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCCompilerABI.c
+        Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs
+        COLLECT_GCC=/root/miniconda3/envs/python310/bin/cc
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib
         Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/'
-         /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_77426.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccQWj5pE.s
-        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
-        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
-        
+        gcc version 4.8.5 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/cc1 -quiet -v -iprefix /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/ -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc86xPBg.s
+        GNU C (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)
+        	compiled by GNU C version 4.8.5, GMP version 6.1.0, MPFR version 3.1.5, MPC version 1.0.3
+        warning: GMP header version 6.1.0 differs from library version 6.2.1.
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/usr/include/i686-linux-gnu"
+        ignoring nonexistent directory "/usr/include/i386-linux-gnu"
+        ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"
+        ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include"
+        ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed"
+        ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/lib/gcc/x86_64-linux-gnu/11/include
-         /usr/local/include
          /usr/include/x86_64-linux-gnu
+         /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include
+         /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed
+         /root/miniconda3/envs/python310/bin/../lib/gcc/../../include
          /usr/include
         End of search list.
-        GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
-        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
-        
+        GNU C (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)
+        	compiled by GNU C version 4.8.5, GMP version 6.1.0, MPFR version 3.1.5, MPC version 1.0.3
+        warning: GMP header version 6.1.0 differs from library version 6.2.1.
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: 50eaa2331df977b8016186198deb2d18
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/'
-         as -v --64 -o CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o /tmp/ccQWj5pE.s
-        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
-        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_77426
-        /root/miniconda3/envs/tvm-build/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77426.dir/link.txt --verbose=1
-        /usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -o cmTC_77426 
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/cc
-        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Compiler executable checksum: 7dc36a59b981ea2fca5298a883e56dd0
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o /tmp/cc86xPBg.s
+        GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+        COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/
+        LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64'
+        Linking C executable cmTC_0e4cd
+        /root/miniconda3/envs/python310/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e4cd.dir/link.txt --verbose=1
+        /root/miniconda3/envs/python310/bin/cc  -v -rdynamic CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -o cmTC_0e4cd 
+        Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs
+        COLLECT_GCC=/root/miniconda3/envs/python310/bin/cc
+        COLLECT_LTO_WRAPPER=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/lto-wrapper
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib
         Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_77426' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_77426.'
-         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3leGTz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_77426 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_77426' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_77426.'
-        gmake[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv'
-        gmake[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv'
+        gcc version 4.8.5 (GCC) 
+        COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/
+        LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0e4cd' '-mtune=generic' '-march=x86-64'
+         /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0e4cd /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5 -L/root/miniconda3/envs/python310/bin/../lib/gcc -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../.. CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o
+        make[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7'
+        make[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
-          add: [/usr/local/include]
           add: [/usr/include/x86_64-linux-gnu]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/../../include]
           add: [/usr/include]
         end of search list found
-        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
-        collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/../../include] ==> [/root/miniconda3/envs/python310/include]
         collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+        implicit include dirs: [/usr/include/x86_64-linux-gnu;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed;/root/miniconda3/envs/python310/include;/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv]
+        ignore line: [Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7']
         ignore line: []
-        ignore line: [Run Build Command(s):/root/miniconda3/envs/tvm-build/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_77426/fast && gmake[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv']
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_77426.dir/build.make CMakeFiles/cmTC_77426.dir/build]
-        ignore line: [gmake[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-6fNhVv']
-        ignore line: [Building C object CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -v -o CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -c /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/cc]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0e4cd/fast]
+        ignore line: [make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_0e4cd.dir/build.make CMakeFiles/cmTC_0e4cd.dir/build]
+        ignore line: [make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-e6vDA7']
+        ignore line: [Building C object CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/root/miniconda3/envs/python310/bin/cc   -v -o CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -c /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCCompilerABI.c]
+        ignore line: [Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs]
+        ignore line: [COLLECT_GCC=/root/miniconda3/envs/python310/bin/cc]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib]
         ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1 -quiet -v -imultiarch x86_64-linux-gnu /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_77426.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccQWj5pE.s]
-        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
-        ignore line: []
+        ignore line: [gcc version 4.8.5 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/cc1 -quiet -v -iprefix /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/ -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -version -o /tmp/cc86xPBg.s]
+        ignore line: [GNU C (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 4.8.5  GMP version 6.1.0  MPFR version 3.1.5  MPC version 1.0.3]
+        ignore line: [warning: GMP header version 6.1.0 differs from library version 6.2.1.]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/usr/include/i686-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/include/i386-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include"]
+        ignore line: [ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
-        ignore line: [ /usr/local/include]
         ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/../../include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [GNU C17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
-        ignore line: []
+        ignore line: [GNU C (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 4.8.5  GMP version 6.1.0  MPFR version 3.1.5  MPC version 1.0.3]
+        ignore line: [warning: GMP header version 6.1.0 differs from library version 6.2.1.]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: 50eaa2331df977b8016186198deb2d18]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o /tmp/ccQWj5pE.s]
-        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_77426]
-        ignore line: [/root/miniconda3/envs/tvm-build/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77426.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/cc  -v -rdynamic CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -o cmTC_77426 ]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/cc]
-        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Compiler executable checksum: 7dc36a59b981ea2fca5298a883e56dd0]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o /tmp/cc86xPBg.s]
+        ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+        ignore line: [COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking C executable cmTC_0e4cd]
+        ignore line: [/root/miniconda3/envs/python310/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e4cd.dir/link.txt --verbose=1]
+        ignore line: [/root/miniconda3/envs/python310/bin/cc  -v -rdynamic CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -o cmTC_0e4cd ]
+        ignore line: [Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs]
+        ignore line: [COLLECT_GCC=/root/miniconda3/envs/python310/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib]
         ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_77426' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_77426.']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/cc3leGTz.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_77426 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
-          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/cc3leGTz.res] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [-plugin-opt=-pass-through=-lc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [--build-id] ==> ignore
+        ignore line: [gcc version 4.8.5 (GCC) ]
+        ignore line: [COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_0e4cd' '-mtune=generic' '-march=x86-64']
+        link line: [ /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0e4cd /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5 -L/root/miniconda3/envs/python310/bin/../lib/gcc -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../.. CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+          arg [/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
           arg [-m] ==> ignore
           arg [elf_x86_64] ==> ignore
-          arg [--hash-style=gnu] ==> ignore
-          arg [--as-needed] ==> ignore
           arg [-export-dynamic] ==> ignore
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-          arg [-pie] ==> ignore
-          arg [-znow] ==> ignore
-          arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_77426] ==> ignore
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
-          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [cmTC_0e4cd] ==> ignore
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib]
           arg [-L/lib/../lib] ==> dir [/lib/../lib]
-          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
-          arg [CMakeFiles/cmTC_77426.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..]
+          arg [CMakeFiles/cmTC_0e4cd.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lgcc] ==> lib [gcc]
-          arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
-          arg [--pop-state] ==> ignore
+          arg [--no-as-needed] ==> ignore
           arg [-lc] ==> lib [c]
           arg [-lgcc] ==> lib [gcc]
-          arg [--push-state] ==> ignore
           arg [--as-needed] ==> ignore
           arg [-lgcc_s] ==> lib [gcc_s]
-          arg [--pop-state] ==> ignore
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
-        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+          arg [--no-as-needed] ==> ignore
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc] ==> [/root/miniconda3/envs/python310/lib/gcc]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib] ==> [/root/miniconda3/envs/python310/lib]
         collapse library dir [/lib/../lib] ==> [/lib]
-        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
         collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..] ==> [/root/miniconda3/envs/python310/lib]
         implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
-        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
-        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit objs: [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        implicit dirs: [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5;/root/miniconda3/envs/python310/lib/gcc;/root/miniconda3/envs/python310/lib;/lib;/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd"
-      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd"
+      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77"
+      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -310,212 +290,192 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd
+        Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77'
         
-        Run Build Command(s):/root/miniconda3/envs/tvm-build/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_26650/fast && gmake[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd'
-        /usr/bin/gmake  -f CMakeFiles/cmTC_26650.dir/build.make CMakeFiles/cmTC_26650.dir/build
-        gmake[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd'
-        Building CXX object CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -v -o CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -c /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/c++
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_411b6/fast
+        make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77'
+        /usr/bin/make  -f CMakeFiles/cmTC_411b6.dir/build.make CMakeFiles/cmTC_411b6.dir/build
+        make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77'
+        Building CXX object CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o
+        /root/miniconda3/envs/python310/bin/c++   -v -o CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -c /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp
+        Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs
+        COLLECT_GCC=/root/miniconda3/envs/python310/bin/c++
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib
         Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/'
-         /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_26650.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cccRWuD9.s
-        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
-        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
-        
+        gcc version 4.8.5 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/cc1plus -quiet -v -iprefix /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/ -D_GNU_SOURCE -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc7cvOvo.s
+        GNU C++ (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)
+        	compiled by GNU C version 4.8.5, GMP version 6.1.0, MPFR version 3.1.5, MPC version 1.0.3
+        warning: GMP header version 6.1.0 differs from library version 6.2.1.
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"
-        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"
-        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"
+        ignoring nonexistent directory "/usr/include/i686-linux-gnu"
+        ignoring nonexistent directory "/usr/include/i386-linux-gnu"
+        ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"
+        ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include"
+        ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed"
+        ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"
         #include "..." search starts here:
         #include <...> search starts here:
-         /usr/include/c++/11
-         /usr/include/x86_64-linux-gnu/c++/11
-         /usr/include/c++/11/backward
-         /usr/lib/gcc/x86_64-linux-gnu/11/include
-         /usr/local/include
          /usr/include/x86_64-linux-gnu
+         /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include
+         /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed
+         /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++
+         /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/x86_64-unknown-linux-gnu
+         /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/backward
+         /root/miniconda3/envs/python310/bin/../lib/gcc/../../include
          /usr/include
         End of search list.
-        GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)
-        	compiled by GNU C version 11.4.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
-        
+        GNU C++ (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)
+        	compiled by GNU C version 4.8.5, GMP version 6.1.0, MPFR version 3.1.5, MPC version 1.0.3
+        warning: GMP header version 6.1.0 differs from library version 6.2.1.
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-        Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/'
-         as -v --64 -o CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o /tmp/cccRWuD9.s
-        GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38
-        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_26650
-        /root/miniconda3/envs/tvm-build/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26650.dir/link.txt --verbose=1
-        /usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_26650 
-        Using built-in specs.
-        COLLECT_GCC=/usr/bin/c++
-        COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper
-        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
-        OFFLOAD_TARGET_DEFAULT=1
-        Target: x86_64-linux-gnu
-        Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2
+        Compiler executable checksum: fdfaf06c00a4858dbacb273a721027a6
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         as -v --64 -o CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc7cvOvo.s
+        GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
+        COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/
+        LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+        Linking CXX executable cmTC_411b6
+        /root/miniconda3/envs/python310/bin/cmake -E cmake_link_script CMakeFiles/cmTC_411b6.dir/link.txt --verbose=1
+        /root/miniconda3/envs/python310/bin/c++  -v -rdynamic CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_411b6 
+        Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs
+        COLLECT_GCC=/root/miniconda3/envs/python310/bin/c++
+        COLLECT_LTO_WRAPPER=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/lto-wrapper
+        Target: x86_64-unknown-linux-gnu
+        Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib
         Thread model: posix
-        Supported LTO compression algorithms: zlib zstd
-        gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) 
-        COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/
-        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26650' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26650.'
-         /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXXdOdq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_26650 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o
-        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26650' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26650.'
-        gmake[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd'
-        gmake[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd'
+        gcc version 4.8.5 (GCC) 
+        COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/
+        LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_411b6' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+         /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_411b6 /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5 -L/root/miniconda3/envs/python310/bin/../lib/gcc -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../.. CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o
+        make[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77'
+        make[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77'
         
       exitCode: 0
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit include dir info: rv=done
         found start of include info
         found start of implicit include info
-          add: [/usr/include/c++/11]
-          add: [/usr/include/x86_64-linux-gnu/c++/11]
-          add: [/usr/include/c++/11/backward]
-          add: [/usr/lib/gcc/x86_64-linux-gnu/11/include]
-          add: [/usr/local/include]
           add: [/usr/include/x86_64-linux-gnu]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/x86_64-unknown-linux-gnu]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/backward]
+          add: [/root/miniconda3/envs/python310/bin/../lib/gcc/../../include]
           add: [/usr/include]
         end of search list found
-        collapse include dir [/usr/include/c++/11] ==> [/usr/include/c++/11]
-        collapse include dir [/usr/include/x86_64-linux-gnu/c++/11] ==> [/usr/include/x86_64-linux-gnu/c++/11]
-        collapse include dir [/usr/include/c++/11/backward] ==> [/usr/include/c++/11/backward]
-        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/11/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/11/include]
-        collapse include dir [/usr/local/include] ==> [/usr/local/include]
         collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++] ==> [/root/miniconda3/envs/python310/gcc/include/c++]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/x86_64-unknown-linux-gnu] ==> [/root/miniconda3/envs/python310/gcc/include/c++/x86_64-unknown-linux-gnu]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/backward] ==> [/root/miniconda3/envs/python310/gcc/include/c++/backward]
+        collapse include dir [/root/miniconda3/envs/python310/bin/../lib/gcc/../../include] ==> [/root/miniconda3/envs/python310/include]
         collapse include dir [/usr/include] ==> [/usr/include]
-        implicit include dirs: [/usr/include/c++/11;/usr/include/x86_64-linux-gnu/c++/11;/usr/include/c++/11/backward;/usr/lib/gcc/x86_64-linux-gnu/11/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+        implicit include dirs: [/usr/include/x86_64-linux-gnu;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed;/root/miniconda3/envs/python310/gcc/include/c++;/root/miniconda3/envs/python310/gcc/include/c++/x86_64-unknown-linux-gnu;/root/miniconda3/envs/python310/gcc/include/c++/backward;/root/miniconda3/envs/python310/include;/usr/include]
       
       
   -
     kind: "message-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:2 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd]
+        ignore line: [Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77']
         ignore line: []
-        ignore line: [Run Build Command(s):/root/miniconda3/envs/tvm-build/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_26650/fast && gmake[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd']
-        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_26650.dir/build.make CMakeFiles/cmTC_26650.dir/build]
-        ignore line: [gmake[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-Y75Xxd']
-        ignore line: [Building CXX object CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -v -o CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -c /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/c++]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_411b6/fast]
+        ignore line: [make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77']
+        ignore line: [/usr/bin/make  -f CMakeFiles/cmTC_411b6.dir/build.make CMakeFiles/cmTC_411b6.dir/build]
+        ignore line: [make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-llXI77']
+        ignore line: [Building CXX object CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/root/miniconda3/envs/python310/bin/c++   -v -o CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -c /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs]
+        ignore line: [COLLECT_GCC=/root/miniconda3/envs/python310/bin/c++]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib]
         ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/']
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_26650.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/cccRWuD9.s]
-        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
-        ignore line: []
+        ignore line: [gcc version 4.8.5 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/cc1plus -quiet -v -iprefix /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/ -D_GNU_SOURCE -isystem /usr/include/x86_64-linux-gnu -isystem /usr/include/i686-linux-gnu -isystem /usr/include/i386-linux-gnu /root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/cc7cvOvo.s]
+        ignore line: [GNU C++ (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 4.8.5  GMP version 6.1.0  MPFR version 3.1.5  MPC version 1.0.3]
+        ignore line: [warning: GMP header version 6.1.0 differs from library version 6.2.1.]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/11"]
-        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/include-fixed"]
-        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/11/../../../../x86_64-linux-gnu/include"]
+        ignore line: [ignoring nonexistent directory "/usr/include/i686-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/include/i386-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include"]
+        ignore line: [ignoring duplicate directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/root/miniconda3/envs/python310/bin/../lib/gcc/../../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../x86_64-unknown-linux-gnu/include"]
         ignore line: [#include "..." search starts here:]
         ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/include/c++/11]
-        ignore line: [ /usr/include/x86_64-linux-gnu/c++/11]
-        ignore line: [ /usr/include/c++/11/backward]
-        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/11/include]
-        ignore line: [ /usr/local/include]
         ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/include-fixed]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/x86_64-unknown-linux-gnu]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/../../gcc/include/c++/backward]
+        ignore line: [ /root/miniconda3/envs/python310/bin/../lib/gcc/../../include]
         ignore line: [ /usr/include]
         ignore line: [End of search list.]
-        ignore line: [GNU C++17 (Ubuntu 11.4.0-1ubuntu1~22.04) version 11.4.0 (x86_64-linux-gnu)]
-        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
-        ignore line: []
+        ignore line: [GNU C++ (GCC) version 4.8.5 (x86_64-unknown-linux-gnu)]
+        ignore line: [	compiled by GNU C version 4.8.5  GMP version 6.1.0  MPFR version 3.1.5  MPC version 1.0.3]
+        ignore line: [warning: GMP header version 6.1.0 differs from library version 6.2.1.]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-        ignore line: [Compiler executable checksum: d591828bb4d392ae8b7b160e5bb0b95f]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/']
-        ignore line: [ as -v --64 -o CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o /tmp/cccRWuD9.s]
-        ignore line: [GNU assembler version 2.38 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.38]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_26650]
-        ignore line: [/root/miniconda3/envs/tvm-build/bin/cmake -E cmake_link_script CMakeFiles/cmTC_26650.dir/link.txt --verbose=1]
-        ignore line: [/usr/bin/c++  -v -rdynamic CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_26650 ]
-        ignore line: [Using built-in specs.]
-        ignore line: [COLLECT_GCC=/usr/bin/c++]
-        ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper]
-        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
-        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-        ignore line: [Target: x86_64-linux-gnu]
-        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 11.4.0-1ubuntu1~22.04' --with-bugurl=file:///usr/share/doc/gcc-11/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-11 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-11-XeT9lY/gcc-11-11.4.0/debian/tmp-gcn/usr --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=2]
+        ignore line: [Compiler executable checksum: fdfaf06c00a4858dbacb273a721027a6]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o /tmp/cc7cvOvo.s]
+        ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
+        ignore line: [COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        ignore line: [Linking CXX executable cmTC_411b6]
+        ignore line: [/root/miniconda3/envs/python310/bin/cmake -E cmake_link_script CMakeFiles/cmTC_411b6.dir/link.txt --verbose=1]
+        ignore line: [/root/miniconda3/envs/python310/bin/c++  -v -rdynamic CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_411b6 ]
+        ignore line: [Reading specs from /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/specs]
+        ignore line: [COLLECT_GCC=/root/miniconda3/envs/python310/bin/c++]
+        ignore line: [COLLECT_LTO_WRAPPER=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/lto-wrapper]
+        ignore line: [Target: x86_64-unknown-linux-gnu]
+        ignore line: [Configured with: ./configure --prefix=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-gxx-include-dir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/gcc/include/c++ --bindir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/bin --datarootdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/share --libdir=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold/lib --with-gmp=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpfr=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-mpc=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-isl=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --with-cloog=/home/ray/mc-x64-2.7/conda-bld/gcc_1479223211463/_b_env_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold_placehold --enable-checking=release --with-tune=generic --disable-multilib]
         ignore line: [Thread model: posix]
-        ignore line: [Supported LTO compression algorithms: zlib zstd]
-        ignore line: [gcc version 11.4.0 (Ubuntu 11.4.0-1ubuntu1~22.04) ]
-        ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/]
-        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/11/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/11/../../../:/lib/:/usr/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_26650' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_26650.']
-        link line: [ /usr/lib/gcc/x86_64-linux-gnu/11/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXXdOdq.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_26650 /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/11 -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/11/../../.. CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/collect2] ==> ignore
-          arg [-plugin] ==> ignore
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/liblto_plugin.so] ==> ignore
-          arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/11/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/tmp/ccXXdOdq.res] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lc] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
-          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-          arg [--build-id] ==> ignore
+        ignore line: [gcc version 4.8.5 (GCC) ]
+        ignore line: [COMPILER_PATH=/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/:/root/miniconda3/envs/python310/bin/../lib/gcc/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_411b6' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+        link line: [ /root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2 --eh-frame-hdr -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_411b6 /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5 -L/root/miniconda3/envs/python310/bin/../lib/gcc -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../.. CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o /root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+          arg [/root/miniconda3/envs/python310/bin/../libexec/gcc/x86_64-unknown-linux-gnu/4.8.5/collect2] ==> ignore
           arg [--eh-frame-hdr] ==> ignore
           arg [-m] ==> ignore
           arg [elf_x86_64] ==> ignore
-          arg [--hash-style=gnu] ==> ignore
-          arg [--as-needed] ==> ignore
           arg [-export-dynamic] ==> ignore
           arg [-dynamic-linker] ==> ignore
           arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-          arg [-pie] ==> ignore
-          arg [-znow] ==> ignore
-          arg [-zrelro] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_26650] ==> ignore
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib]
-          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [cmTC_411b6] ==> ignore
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc]
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib]
           arg [-L/lib/../lib] ==> dir [/lib/../lib]
-          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
           arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-          arg [-L/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..]
-          arg [CMakeFiles/cmTC_26650.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-L/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..] ==> dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..]
+          arg [CMakeFiles/cmTC_411b6.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lstdc++] ==> lib [stdc++]
           arg [-lm] ==> lib [m]
           arg [-lgcc_s] ==> lib [gcc_s]
@@ -523,41 +483,77 @@ events:
           arg [-lc] ==> lib [c]
           arg [-lgcc_s] ==> lib [gcc_s]
           arg [-lgcc] ==> lib [gcc]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o]
-          arg [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
-        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11] ==> [/usr/lib/gcc/x86_64-linux-gnu/11]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../../../lib] ==> [/usr/lib]
-        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o]
+          arg [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o] ==> obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o]
+        collapse obj [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5] ==> [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc] ==> [/root/miniconda3/envs/python310/lib/gcc]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../../../lib] ==> [/root/miniconda3/envs/python310/lib]
         collapse library dir [/lib/../lib] ==> [/lib]
-        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
         collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/11/../../..] ==> [/usr/lib]
+        collapse library dir [/root/miniconda3/envs/python310/bin/../lib/gcc/x86_64-unknown-linux-gnu/4.8.5/../../..] ==> [/root/miniconda3/envs/python310/lib]
         implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/11/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
-        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/11;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit objs: [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crt1.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crti.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtbegin.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtend.o;/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5/crtn.o]
+        implicit dirs: [/root/miniconda3/envs/python310/lib/gcc/x86_64-unknown-linux-gnu/4.8.5;/root/miniconda3/envs/python310/lib/gcc;/root/miniconda3/envs/python310/lib;/lib;/usr/lib]
         implicit fwks: []
       
       
   -
     kind: "try_compile-v1"
     backtrace:
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
-      - "/root/miniconda3/envs/tvm-build/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
-      - "/root/miniconda3/envs/tvm-build/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:276 (check_cxx_compiler_flag)"
-      - "/root/miniconda3/envs/tvm-build/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:318 (_pybind11_return_if_cxx_and_linker_flags_work)"
-      - "/root/miniconda3/envs/tvm-build/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:385 (_pybind11_generate_lto)"
-      - "/root/miniconda3/envs/tvm-build/lib/python3.8/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake:250 (include)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:34 (try_compile)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/Internal/FeatureTesting.cmake:83 (_record_compiler_features)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake:121 (_record_compiler_features_cxx)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeDetermineCompileFeatures.cmake:70 (cmake_record_cxx_compile_features)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CMakeTestCXXCompiler.cmake:70 (CMAKE_DETERMINE_COMPILE_FEATURES)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compile features"
+    directories:
+      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8"
+      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_FEATURE_TEST"
+      cached: true
+      stdout: |
+        Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8'
+        
+        Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a4218/fast
+        make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8'
+        /usr/bin/make  -f CMakeFiles/cmTC_a4218.dir/build.make CMakeFiles/cmTC_a4218.dir/build
+        make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8'
+        Building CXX object CMakeFiles/cmTC_a4218.dir/feature_tests.cxx.o
+        /root/miniconda3/envs/python310/bin/c++   -std=c++1y -o CMakeFiles/cmTC_a4218.dir/feature_tests.cxx.o -c /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8/feature_tests.cxx
+        Linking CXX executable cmTC_a4218
+        /root/miniconda3/envs/python310/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4218.dir/link.txt --verbose=1
+        /root/miniconda3/envs/python310/bin/c++ -rdynamic CMakeFiles/cmTC_a4218.dir/feature_tests.cxx.o -o cmTC_a4218 
+        make[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8'
+        make[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-LBjmd8'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/root/miniconda3/envs/python310/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "/root/miniconda3/envs/python310/lib/python3.10/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:276 (check_cxx_compiler_flag)"
+      - "/root/miniconda3/envs/python310/lib/python3.10/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:318 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "/root/miniconda3/envs/python310/lib/python3.10/site-packages/pybind11/share/cmake/pybind11/pybind11Common.cmake:385 (_pybind11_generate_lto)"
+      - "/root/miniconda3/envs/python310/lib/python3.10/site-packages/pybind11/share/cmake/pybind11/pybind11Config.cmake:250 (include)"
       - "CMakeLists.txt:15 (find_package)"
     checks:
       - "Performing Test HAS_FLTO"
     directories:
-      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT"
-      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT"
+      source: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8"
+      binary: "/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_EXE_LINKER_FLAGS: ""
@@ -565,18 +561,19 @@ events:
       variable: "HAS_FLTO"
       cached: true
       stdout: |
-        Change Dir: /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT
+        Change Dir: '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8'
         
-        Run Build Command(s):/root/miniconda3/envs/tvm-build/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_42e61/fast && gmake[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT'
-        /usr/bin/gmake  -f CMakeFiles/cmTC_42e61.dir/build.make CMakeFiles/cmTC_42e61.dir/build
-        gmake[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT'
-        Building CXX object CMakeFiles/cmTC_42e61.dir/src.cxx.o
-        /usr/bin/c++ -DHAS_FLTO  -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_42e61.dir/src.cxx.o -c /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT/src.cxx
-        Linking CXX executable cmTC_42e61
-        /root/miniconda3/envs/tvm-build/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42e61.dir/link.txt --verbose=1
-        /usr/bin/c++ -rdynamic CMakeFiles/cmTC_42e61.dir/src.cxx.o -o cmTC_42e61  -flto 
-        gmake[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT'
-        gmake[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-O8SYuT'
+        Run Build Command(s): /root/miniconda3/envs/python310/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_50048/fast
+        make[1]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8'
+        /usr/bin/make  -f CMakeFiles/cmTC_50048.dir/build.make CMakeFiles/cmTC_50048.dir/build
+        make[2]: Entering directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8'
+        Building CXX object CMakeFiles/cmTC_50048.dir/src.cxx.o
+        /root/miniconda3/envs/python310/bin/c++ -DHAS_FLTO  -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_50048.dir/src.cxx.o -c /root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8/src.cxx
+        cc1plus: error: -fno-fat-lto-objects are supported only with linker plugin.
+        make[2]: *** [CMakeFiles/cmTC_50048.dir/build.make:78: CMakeFiles/cmTC_50048.dir/src.cxx.o] Error 1
+        make[2]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8'
+        make[1]: *** [Makefile:127: cmTC_50048/fast] Error 2
+        make[1]: Leaving directory '/root/DLSysCourse_Needle/course_homework/hw3/build/CMakeFiles/CMakeScratch/TryCompile-NVKtn8'
         
-      exitCode: 0
+      exitCode: 2
 ...
