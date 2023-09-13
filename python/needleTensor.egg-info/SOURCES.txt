@@ -1,0 +1,7 @@
+README.md
+setup.py
+needleTensor.egg-info/PKG-INFO
+needleTensor.egg-info/SOURCES.txt
+needleTensor.egg-info/dependency_links.txt
+needleTensor.egg-info/requires.txt
+needleTensor.egg-info/top_level.txt
