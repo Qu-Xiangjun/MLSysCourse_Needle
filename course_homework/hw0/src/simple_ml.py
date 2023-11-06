@@ -122,7 +122,7 @@ def softmax_regression_epoch(X, y, theta, lr = 0.1, batch=100):
       y_b = y[i*batch : j] # train lables
       m = j - i*batch
       if(m == 0):
-        break;
+        break
       
       # Compute result
       H = X_b.dot(theta) # (num_examples x input_dim)·(input_dim x num_classes)

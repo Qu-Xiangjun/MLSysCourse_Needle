@@ -99,9 +99,6 @@ def all_devices():
 class NDArray:
     """A generic ND array class that may contain multiple different backends
     i.e., a Numpy backend, a native CPU backend, or a GPU backend.
-    This class will only contains those functions that you need to implement
-    to actually get the desired functionality for the programming examples
-    in the homework, and no more.
     For now, for simplicity the class only supports float32 types, though
     this can be extended if desired.
     """
@@ -604,6 +601,56 @@ class NDArray:
         self.device.reduce_max(view.compact()._handle, out._handle, view.shape[-1])
         return out
 
+    def flip(self, axes = None):
+        """
+        Flip this ndarray along the specified axes.
+        Note: compact() before returning.
+        """
+        if axes is None:
+            # None mean flip all dimension
+            axes = range(len(self.shape))
+        elif isinstance(axes, int):
+            axes = (axes,)
+        # flip的核心思想以一个例子为说明：长度为8的数组，index为0~7，翻转这个数组，
+        # 那么位置3的数怎么找到翻转后的位置呢，先相对0取镜像，即-3,则代表是倒数第4个元素
+        # （因为0翻转后是0，为第一个元素)，然后加整个的长度8-1,-3+7=4，即翻转后的位置。
+        #
+        # 翻转之后的结果，访问一个点s索引，实际是从原来翻转前的最后一个位置元素开始计算，
+        # 因此strides 应该全部变成负，即计算从最后一个位置开始的偏移
+        # 这时候通过-strides[i]*index[i]得到的坐标是与strides[i]*index[i]在此维度上
+        # 相对0对称的，那么再加上一个偏移，即该个维度下所有元素的偏移；
+        # 如此就得到了该索引在实际内存的地址上的地址
+        # 如下可以看到为什么是shape[ax] - 1而不是shape，是因为index从0开始计算的
+        offset_sum = 0
+        strides = list(self.strides)
+        for ax in axes:
+            strides[ax] = -strides[ax]
+            offset_sum += (self.shape[ax] - 1) * self.strides[ax]
+        return NDArray.make(
+            self.shape,
+            strides=tuple(strides),
+            device=self.device,
+            handle=self._handle,
+            offset=offset_sum,
+        ).compact()
+
+
+    def pad(self, axes):
+        """
+        Pad this ndarray by zeros by the specified amount in `axes`,
+        which lists for _all_ axes the left and right padding amount, e.g.,
+        axes = ( (0, 0), (1, 1), (0, 0)) pads the middle axis with a 0 on the left and right side.
+        """
+        new_shape = list(self.shape)
+        for i, ax in enumerate(axes):
+            new_shape[i] += ax[0] + ax[1]
+        ret = NDArray.make(tuple(new_shape), device=self.device)
+        ret.fill(0)
+        slices = [slice(ax[0], ax[0]+self.shape[i]) for i, ax in enumerate(axes)]
+        ret[tuple(slices)] = self
+        
+        return ret
+
 
 """ Global function. Handle the NDArray as args. """
 def array(a, dtype="float32", device=None):
@@ -647,8 +694,8 @@ def tanh(a: NDArray):
     return a.tanh()
 
 
-# def flip(a, axes):
-#     return a.flip(axes)
+def flip(a: NDArray, axes = None):
+    return a.flip(axes)
 
 
 def summation(a: NDArray, axis=None, keepdims=False):

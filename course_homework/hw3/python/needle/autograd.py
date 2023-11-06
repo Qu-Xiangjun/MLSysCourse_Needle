@@ -145,6 +145,11 @@ class Value:
             value.realize_cached_data()
         return value
 
+    def numpy(self):
+        data = self.realize_cached_data()
+        if array_api is numpy:
+            return data
+        return data.numpy() if not isinstance(data, tuple) else [x.numpy() for x in data]
 
 class TensorTuple(Value):
     """Represent a tuple of tensors.
@@ -294,12 +299,6 @@ class Tensor(Value):
     def __str__(self):
         return self.realize_cached_data().__str__()
 
-    def numpy(self):
-        data = self.realize_cached_data()
-        if array_api is numpy:
-            return data
-        return data.numpy()
-
     def __add__(self, other):
         if isinstance(other, Tensor):
             return needle.ops.EWiseAdd()(self, other)
@@ -337,9 +336,11 @@ class Tensor(Value):
         return needle.ops.MatMul()(self, other)
 
     def sum(self, axes=None):
+        "Notice the axes is the plural form of axis, which contain number of axis."
         return needle.ops.Summation(axes)(self)
     
     def max(self, axes = None):
+        "Notice the axes is the plural form of axis, which contain number of axis."
         return needle.ops.Max(axes)(self)
 
     def broadcast_to(self, shape):

@@ -1,5 +1,6 @@
 """Optimization module"""
 import needle as ndl
+import numpy as np
 
 
 class Optimizer:
@@ -36,7 +37,16 @@ class SGD(Optimizer):
             self.u[param] = ndl.Tensor(grad, dtype=param.type, requires_grad=False)
             # Update the param
             param.data -= self.lr * self.u[param]
-
+            
+    def clip_grad_norm(self, max_norm=0.25):
+        """
+        Clips gradient norm of parameters.
+        """
+        total_norm = np.linalg.norm(np.array([np.linalg.norm(p.grad.detach().numpy()).reshape((1,)) for p in self.params]))
+        clip_coef = max_norm / (total_norm + 1e-6)
+        clip_coef_clamped = min((np.asscalar(clip_coef), 1.0))
+        for p in self.params:
+            p.grad = p.grad.detach() * clip_coef_clamped
 
 class Adam(Optimizer):
     def __init__(

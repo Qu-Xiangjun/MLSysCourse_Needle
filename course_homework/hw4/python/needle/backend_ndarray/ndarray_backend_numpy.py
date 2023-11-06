@@ -15,7 +15,15 @@ class Array:
         return self.array.size
 
 
+"""
+Implement operators for the numpy NDArray backend.
+"""
+
+
 def to_numpy(a, shape, strides, offset):
+    # `a.array[offset:]` indicates the memory address.
+    # `shape` means the array shape.
+    # The third parameter indicates the strides in byte format for every dimensions. 
     return np.lib.stride_tricks.as_strided(
         a.array[offset:], shape, tuple([s * _datetype_size for s in strides])
     )
@@ -30,14 +38,19 @@ def fill(out, val):
 
 
 def compact(a, out, shape, strides, offset):
+    """Compact the  array of a by flatting multidimension to other contiguous 
+    memory address of out. Flatting can list all the elemets in compact order 
+    by shape, then store to other memory space in shape compact order."""
     out.array[:] = to_numpy(a, shape, strides, offset).flatten()
 
 
 def ewise_setitem(a, out, shape, strides, offset):
+    """Map a to other memory address of out by numpy format."""
     to_numpy(out, shape, strides, offset)[:] = a.array.reshape(shape)
 
 
 def scalar_setitem(size, val, out, shape, strides, offset):
+    """Assigns a scalar value to all elements of a multidimensional array."""
     to_numpy(out, shape, strides, offset)[:] = val
 
 
