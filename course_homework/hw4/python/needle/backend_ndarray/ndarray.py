@@ -567,6 +567,14 @@ class NDArray:
         Return a view to the array set up for reduction functions and output array. 
         Which simplize the function work by permute array, that make the axis become
         last dimension.
+        Parameters
+        ----------
+        arg1 : axis
+            Indicate which axis need reduce. If axis is none, it indicate all the axes
+            will reduce to one value
+        arg2 : keepdims option
+            `keepdims` default false indicates don't need keep origin dimension size, 
+            and ture indicate keep origin dimension size.
         """
         if isinstance(axis, tuple) and not axis:
             axis = None

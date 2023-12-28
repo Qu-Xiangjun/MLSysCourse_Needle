@@ -1,10 +1,17 @@
-cmake_minimum_required(VERSION 3.2)
-project(needle C CXX)
+cmake_minimum_required(VERSION 3.2) # 指定最低的CMake版本要求
+project(needle C CXX) # 项目名称指定为needle, 使用编程语言c c++
 
 # find correct version of Python
-execute_process(COMMAND python3-config --prefix
-  OUTPUT_VARIABLE Python_ROOT_DIR)
+# 执行了外部命令找到python的根目录路径
+# 这里的python 可以替换为conda环境也行
+# 这里找到的python 执行器决定了python环境的使用，即后面的package和include地址
+execute_process(COMMAND python -c "import sys; print(sys.executable)" 
+    OUTPUT_VARIABLE Python_EXECUTABLE
+    OUTPUT_STRIP_TRAILING_WHITESPACE) # 用于删除输出结果末尾的空白字符
+# 找到 Python 的 Development（开发）和 Interpreter（解释器）组件，并要求找到它们。
+# 这将用于与 Python 的开发和运行时交互。
 find_package(Python COMPONENTS Development Interpreter REQUIRED)
+# 将 Python 的包含目录添加到项目的包含路径中，以便 CMake 和项目可以找到 Python 的头文件
 include_directories(${Python_INCLUDE_DIRS})
 
 # find pybind

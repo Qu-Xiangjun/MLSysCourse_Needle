@@ -6,6 +6,9 @@ import math
 import numpy as np
 np.random.seed(0)
 
+class ConvBN(ndl.nn.Module):
+    pass
+
 
 class ResNet9(ndl.nn.Module):
     def __init__(self, device=None, dtype="float32"):

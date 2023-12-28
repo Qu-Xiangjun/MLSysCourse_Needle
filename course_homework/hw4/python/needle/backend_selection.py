@@ -17,10 +17,10 @@ if BACKEND == "nd":
     )
 
     NDArray = array_api.NDArray
-elif BACKEND == "np":
-    import numpy as array_api
-    from .backend_numpy import all_devices, cpu, default_device, Device
+# elif BACKEND == "np":
+#     import numpy as array_api
+#     from .backend_numpy import all_devices, cpu, default_device, Device
 
-    NDArray = array_api.ndarray
+#     NDArray = array_api.ndarray
 else:
     raise RuntimeError("Unknown needle array backend %s" % BACKEND)

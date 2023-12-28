@@ -380,7 +380,6 @@ def exp(a):
     return Exp()(a)
 
 
-# TODO
 class ReLU(TensorOp):
     def compute(self, a: NDArray):
         return array_api.maximum(a, 0)
@@ -395,29 +394,39 @@ def relu(a):
 
 
 class LogSumExp(TensorOp):
-    def __init__(self, axes: Optional[tuple] = None):
-        self.axes = axes
+    """
+    Stbale LSE, which avoid up and down overleaf.
+    """
+    def __init__(self, axis: Optional[tuple] = None):
+        self.axis = axis
 
     def compute(self, Z: NDArray):
-        Z_max = array_api.max(Z, axis = self.axes, keepdims=False)
-        Z_max_broadcast = array_api.max(Z, axis = self.axes, keepdims=False)
-        ret = Z_max + array_api.log(
-            array_api.summation(array_api.exp(Z - Z_max_broadcast), axis = self.axes)
+        """
+        Parameter
+        ---------
+        arg : Z NDArray [...(such as bacth_size), n]
+        """
+        Z_max = array_api.max(Z, axis = self.axis, keepdims=False) # [...]
+        Z_max_broadcast = array_api.max(
+            Z, axis = self.axis, keepdims=True
+        ).broadcast_to(Z.shape) # [...(sunch as bacth_size), 1]
+        return Z_max + array_api.log(
+            array_api.summation(array_api.exp(Z - Z_max_broadcast), axis = self.axis)
         )
 
     def gradient(self, out_grad, node):
         Z = node.inputs[0].realize_cached_data()
-        Z_max_broadcast = array_api.max(Z, axis = self.axes, keepdims = True)
+        Z_max_broadcast = array_api.max(Z, axis = self.axis, keepdims = True)
         exp_Z_maxZ = array_api.exp(Z - Z_max_broadcast)
-        sum_exp_Z_maxZ = array_api.summation(exp_Z_maxZ, axis = self.axes)
+        sum_exp_Z_maxZ = array_api.summation(exp_Z_maxZ, axis = self.axis)
 
         # First compute the grad for out * grad for log operator, 
         # because their dimension is same.
         log_grad = out_grad.realize_cached_data() / sum_exp_Z_maxZ
-        # Make the log_grad's shape reshape to the input shape by add dimension.
+        # Make the log_grad dimensions reshape to same with the input dimensions.
         shape = [1] * len(Z.shape)
-        if self.axes:
-            s = set(self.axes)
+        if self.axis:
+            s = set(self.axis)
             j = 0
             for i in range(len(shape)):
                 if j not in s:
@@ -427,8 +436,8 @@ class LogSumExp(TensorOp):
         return Tensor(log_grad_reshape * exp_Z_maxZ)
 
 
-def logsumexp(a, axes=None):
-    return LogSumExp(axes=axes)(a)
+def logsumexp(a, axis=None):
+    return LogSumExp(axis=axis)(a)
 
 
 class Tanh(TensorOp):
@@ -446,9 +455,12 @@ class Stack(TensorOp):
     def __init__(self, axis: int):
         """
         Concatenates a sequence of arrays along a new dimension.
-        Parameters:
-        axis - dimension to concatenate along
-        All arrays need to be of the same size.
+
+        Parameters
+        ----------
+        arg : axis
+            dimension to concatenate along All arrays need to 
+            be of the same size.
         """
         self.axis = axis
 

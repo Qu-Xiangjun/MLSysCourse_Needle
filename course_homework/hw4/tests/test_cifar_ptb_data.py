@@ -1,5 +1,6 @@
-import sys
-sys.path.append('./python')
+import sys, os
+path = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(os.path.join(path,'./python'))
 import itertools
 import numpy as np
 import pytest

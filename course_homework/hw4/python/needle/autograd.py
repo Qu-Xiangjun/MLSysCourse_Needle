@@ -5,12 +5,12 @@ from collections import namedtuple
 import numpy
 from needle import init
 
-# needle version
-LAZY_MODE = False
-TENSOR_COUNTER = 0
-
+# Backend api
 from .backend_selection import Device, array_api, NDArray, default_device
 
+# needle global parameters
+LAZY_MODE = False
+TENSOR_COUNTER = 0
 
 class Op:
     """Operator definition."""
@@ -22,7 +22,7 @@ class Op:
         """Calculate forward pass of operator.
         Parameters
         ----------
-        input: np.ndarray
+        input: nd.array
             A list of input arrays to the function
         Returns
         -------
@@ -35,12 +35,14 @@ class Op:
         self, out_grad: "Value", node: "Value"
     ) -> Union["Value", Tuple["Value"]]:
         """Compute partial adjoint for each input value for a given output adjoint.
+        
         Parameters
         ----------
         out_grad: Value
             The adjoint wrt to the output value.
         node: Value
             The value node of forward evaluation.
+
         Returns
         -------
         input_grads: Value or Tuple[Value]
@@ -50,7 +52,11 @@ class Op:
         raise NotImplementedError()
 
     def gradient_as_tuple(self, out_grad: "Value", node: "Value") -> Tuple["Value"]:
-        """ Convenience method to always return a tuple from gradient call"""
+        """ 
+        Convenience method to always return a tuple from gradient call.
+        Due to some return from gradient function will be tuple or a
+        value, there need unify return form.
+        """
         output = self.gradient(out_grad, node)
         if isinstance(output, tuple):
             return output
@@ -62,9 +68,12 @@ class Op:
 
 class TensorOp(Op):
     """ Op class specialized to output tensors, 
-    will be alternate subclasses for other structures """
+    will be alternate subclasses for other structures. """
 
     def __call__(self, *args):
+        """
+        Invoke tensor 
+        """
         return Tensor.make_from_op(self, args)
 
 
@@ -82,8 +91,8 @@ class Value:
     op: Optional[Op]
     inputs: List["Value"]
     # The following fields are cached fields for dynamic computation.
-    cached_data: NDArray # Tensor value, which is computed by op and inputs.
-    requires_grad: bool  # Is need to auto grad compute.
+    cached_data: NDArray # computed by op and inputs.
+    requires_grad: bool  # wheather need to auto grad compute.
 
     def realize_cached_data(self):
         """Run compute to realize the cached data"""
@@ -98,6 +107,10 @@ class Value:
         return self.cached_data
 
     def is_leaf(self):
+        """
+        Leaf node don't have op, because only participate to computate
+        to generate next tensor.
+        """
         return self.op is None
 
     def __del__(self):
@@ -125,6 +138,9 @@ class Value:
 
     @classmethod
     def make_const(cls, data, *, requires_grad=False):
+        """
+        Make the const tensor node, which don't contain op and inputs.
+        """
         value = cls.__new__(cls)
         value._init(
             None,
@@ -136,23 +152,33 @@ class Value:
 
     @classmethod
     def make_from_op(cls, op: Op, inputs: List["Value"]):
+        """
+        Make a new tensor from op compute.
+        """
         value = cls.__new__(cls)
-        value._init(op, inputs)
+        value._init(op, inputs) # Init tensor's op and inputs.
 
         if not LAZY_MODE:
-            if not value.requires_grad:
+            if not value.requires_grad: 
+                # don't need gradient compute, so get a const tensor.
                 return value.detach()
             value.realize_cached_data()
-        return value
+        # LAZY MODE don't need compute in now.
+        return value 
 
     def numpy(self):
+        """
+        Return cached_data as numpy type.
+        """
         data = self.realize_cached_data()
         if array_api is numpy:
             return data
         return data.numpy() if not isinstance(data, tuple) else [x.numpy() for x in data]
 
+
 class TensorTuple(Value):
-    """Represent a tuple of tensors.
+    """
+    Represent a tuple of tensors.
     To keep things simple, we do not support nested tuples.
     """
 
@@ -206,7 +232,7 @@ class Tensor(Value):
                 cached_data = Tensor._array_from_numpy(
                     array.numpy(), device=device, dtype=dtype
                 )
-        else:
+        else: # Other array type only support numpy.
             device = device if device else default_device()
             cached_data = Tensor._array_from_numpy(array, device=device, dtype=dtype)
 
@@ -225,19 +251,24 @@ class Tensor(Value):
 
     @staticmethod
     def make_from_op(op: Op, inputs: List["Value"]):
-        """Compute the tensor of computational graph by op and inpyts list."""
+        """
+        Compute the tensor of computational graph by op and inpyts list.
+        """
         tensor = Tensor.__new__(Tensor)
-        tensor._init(op, inputs)
+        tensor._init(op, inputs) # Init tensor's op and inputs.
         if not LAZY_MODE:
             if not tensor.requires_grad:
+                # don't need gradient compute, so get a const tensor.
                 return tensor.detach()
             tensor.realize_cached_data()
+        # LAZY MODE don't need compute in now.
         return tensor
 
     @staticmethod
     def make_const(data, requires_grad=False):
-        """Make the const tensor node, bot operations to compute graph node, 
-        which contains op and inputs."""
+        """
+        Make the const tensor node, which don't contain op and inputs.
+        """
         tensor = Tensor.__new__(Tensor)
         tensor._init(
             None,
@@ -251,31 +282,39 @@ class Tensor(Value):
 
     @property
     def data(self):
-        """Get the data which only have value,not computational graph node."""
+        """
+        Get the data which only have value,not contain computational 
+        graph about info.
+        """
         return self.detach()
 
     @data.setter
     def data(self, value):
         """Change the value by a tensor prameter."""
-        assert isinstance(value, Tensor)
+        assert isinstance(value, Tensor,  \
+            "[ERROR][Tensor] value type must be Tensor."
+            )
         assert value.dtype == self.dtype,  \
-            "[ERROR Tensor] value.dtype %s different from %s" % (
+            "[ERROR][Tensor] value.dtype %s different from %s." % (
                 value.dtype,
                 self.dtype,
             )
         self.cached_data = value.realize_cached_data()
 
     def detach(self):
-        """Create a new tensor that shares the data but detaches from the graph."""
+        """
+        Create a new tensor that shares the data but detaches from 
+        the graph.
+        """
         return Tensor.make_const(self.realize_cached_data())
 
     @property
     def shape(self):
-        return self.realize_cached_data().shape
+        return self.realize_cached_data().shape # array_api NDArray shape
 
     @property
     def dtype(self):
-        return self.realize_cached_data().dtype
+        return self.realize_cached_data().dtype # array_api NDArray dtype
 
     @property
     def device(self):
@@ -339,9 +378,9 @@ class Tensor(Value):
         "Notice the axes is the plural form of axis, which contain number of axis."
         return needle.ops.Summation(axes)(self)
     
-    def max(self, axes = None):
+    def max(self, axes = None, keepdims = False):
         "Notice the axes is the plural form of axis, which contain number of axis."
-        return needle.ops.Max(axes)(self)
+        return needle.ops.Max(axes, keepdims)(self)
 
     def broadcast_to(self, shape):
         return needle.ops.BroadcastTo(shape)(self)
@@ -391,7 +430,8 @@ def compute_gradient_of_variables(output_tensor, out_grad):
 
         if(node.is_leaf()):
             continue
-
+        
+        # Backward grad for every input tensor.
         for i, grad in enumerate(node.op.gradient_as_tuple(node.grad, node)):
             in_node = node.inputs[i]
             if in_node not in node_to_output_grads_list:
@@ -435,7 +475,10 @@ def topo_sort_dfs(node, visited, topo_order):
 
 
 def sum_node_list(node_list):
-    """Custom sum function in order to avoid create redundant nodes in Python sum implementation."""
+    """
+    Custom sum function in order to avoid create redundant nodes 
+    (middle res) in Python sum implementation.
+    """
     from operator import add
     from functools import reduce
 

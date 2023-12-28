@@ -1,0 +1,1515 @@
+[1m============================= test session starts ==============================[0m
+platform linux -- Python 3.11.4, pytest-7.4.3, pluggy-1.0.0 -- /root/miniconda3/bin/python3
+cachedir: .pytest_cache
+rootdir: /root/DLSysCourse_Needle/course_homework/hw4
+[1mcollecting ... [0mcollected 1803 items / 1685 deselected / 118 selected
+
+tests/test_nd_backend.py::test_ewise_fn[cpu-shape0-divide] [32mPASSED[0m[32m        [  0%][0m
+tests/test_nd_backend.py::test_ewise_fn[cpu-shape0-subtract] [32mPASSED[0m[32m      [  1%][0m
+tests/test_nd_backend.py::test_ewise_fn[cpu-shape1-divide] [32mPASSED[0m[32m        [  2%][0m
+tests/test_nd_backend.py::test_ewise_fn[cpu-shape1-subtract] [32mPASSED[0m[32m      [  3%][0m
+tests/test_nd_backend.py::test_ewise_fn[cuda-shape0-divide] [33mSKIPPED[0m[32m      [  4%][0m
+tests/test_nd_backend.py::test_ewise_fn[cuda-shape0-subtract] [33mSKIPPED[0m[32m    [  5%][0m
+tests/test_nd_backend.py::test_ewise_fn[cuda-shape1-divide] [33mSKIPPED[0m[32m      [  5%][0m
+tests/test_nd_backend.py::test_ewise_fn[cuda-shape1-subtract] [33mSKIPPED[0m[32m    [  6%][0m
+tests/test_nd_backend.py::test_scalar_fn[cpu-shape0-divide] [32mPASSED[0m[32m       [  7%][0m
+tests/test_nd_backend.py::test_scalar_fn[cpu-shape0-subtract] [32mPASSED[0m[32m     [  8%][0m
+tests/test_nd_backend.py::test_scalar_fn[cpu-shape1-divide] [32mPASSED[0m[32m       [  9%][0m
+tests/test_nd_backend.py::test_scalar_fn[cpu-shape1-subtract] [32mPASSED[0m[32m     [ 10%][0m
+tests/test_nd_backend.py::test_scalar_fn[cuda-shape0-divide] [33mSKIPPED[0m[32m     [ 11%][0m
+tests/test_nd_backend.py::test_scalar_fn[cuda-shape0-subtract] [33mSKIPPED[0m[32m   [ 11%][0m
+tests/test_nd_backend.py::test_scalar_fn[cuda-shape1-divide] [33mSKIPPED[0m[32m     [ 12%][0m
+tests/test_nd_backend.py::test_scalar_fn[cuda-shape1-subtract] [33mSKIPPED[0m[32m   [ 13%][0m
+tests/test_nd_backend.py::test_matmul[cpu-16-16-16] [32mPASSED[0m[32m               [ 14%][0m
+tests/test_nd_backend.py::test_matmul[cpu-8-8-8] [32mPASSED[0m[32m                  [ 15%][0m
+tests/test_nd_backend.py::test_matmul[cpu-1-2-3] [32mPASSED[0m[32m                  [ 16%][0m
+tests/test_nd_backend.py::test_matmul[cpu-3-4-5] [32mPASSED[0m[32m                  [ 16%][0m
+tests/test_nd_backend.py::test_matmul[cpu-5-4-3] [32mPASSED[0m[32m                  [ 17%][0m
+tests/test_nd_backend.py::test_matmul[cpu-16-16-32] [31mFAILED[0m[31m               [ 18%][0m
+tests/test_nd_backend.py::test_matmul[cpu-64-64-64] [32mPASSED[0m[31m               [ 19%][0m
+tests/test_nd_backend.py::test_matmul[cpu-72-72-72] [32mPASSED[0m[31m               [ 20%][0m
+tests/test_nd_backend.py::test_matmul[cpu-72-73-74] [32mPASSED[0m[31m               [ 21%][0m
+tests/test_nd_backend.py::test_matmul[cpu-74-73-72] [32mPASSED[0m[31m               [ 22%][0m
+tests/test_nd_backend.py::test_matmul[cpu-128-128-128] [32mPASSED[0m[31m            [ 22%][0m
+tests/test_nd_backend.py::test_matmul[cuda-16-16-16] [33mSKIPPED[0m (No GPU)[31m    [ 23%][0m
+tests/test_nd_backend.py::test_matmul[cuda-8-8-8] [33mSKIPPED[0m (No GPU)[31m       [ 24%][0m
+tests/test_nd_backend.py::test_matmul[cuda-1-2-3] [33mSKIPPED[0m (No GPU)[31m       [ 25%][0m
+tests/test_nd_backend.py::test_matmul[cuda-3-4-5] [33mSKIPPED[0m (No GPU)[31m       [ 26%][0m
+tests/test_nd_backend.py::test_matmul[cuda-5-4-3] [33mSKIPPED[0m (No GPU)[31m       [ 27%][0m
+tests/test_nd_backend.py::test_matmul[cuda-16-16-32] [33mSKIPPED[0m (No GPU)[31m    [ 27%][0m
+tests/test_nd_backend.py::test_matmul[cuda-64-64-64] [33mSKIPPED[0m (No GPU)[31m    [ 28%][0m
+tests/test_nd_backend.py::test_matmul[cuda-72-72-72] [33mSKIPPED[0m (No GPU)[31m    [ 29%][0m
+tests/test_nd_backend.py::test_matmul[cuda-72-73-74] [33mSKIPPED[0m (No GPU)[31m    [ 30%][0m
+tests/test_nd_backend.py::test_matmul[cuda-74-73-72] [33mSKIPPED[0m (No GPU)[31m    [ 31%][0m
+tests/test_nd_backend.py::test_matmul[cuda-128-128-128] [33mSKIPPED[0m (No GPU)[31m [ 32%][0m
+tests/test_nd_backend.py::test_power[cpu-shape0] [32mPASSED[0m[31m                  [ 33%][0m
+tests/test_nd_backend.py::test_power[cpu-shape1] [32mPASSED[0m[31m                  [ 33%][0m
+tests/test_nd_backend.py::test_power[cuda-shape0] [33mSKIPPED[0m (No GPU)[31m       [ 34%][0m
+tests/test_nd_backend.py::test_power[cuda-shape1] [33mSKIPPED[0m (No GPU)[31m       [ 35%][0m
+tests/test_nd_backend.py::test_log[cpu-shape0] [32mPASSED[0m[31m                    [ 36%][0m
+tests/test_nd_backend.py::test_log[cpu-shape1] [32mPASSED[0m[31m                    [ 37%][0m
+tests/test_nd_backend.py::test_log[cuda-shape0] [33mSKIPPED[0m (No GPU)[31m         [ 38%][0m
+tests/test_nd_backend.py::test_log[cuda-shape1] [33mSKIPPED[0m (No GPU)[31m         [ 38%][0m
+tests/test_nd_backend.py::test_exp[cpu-shape0] [32mPASSED[0m[31m                    [ 39%][0m
+tests/test_nd_backend.py::test_exp[cpu-shape1] [32mPASSED[0m[31m                    [ 40%][0m
+tests/test_nd_backend.py::test_exp[cuda-shape0] [33mSKIPPED[0m (No GPU)[31m         [ 41%][0m
+tests/test_nd_backend.py::test_exp[cuda-shape1] [33mSKIPPED[0m (No GPU)[31m         [ 42%][0m
+tests/test_nd_backend.py::test_relu[cpu-shape0] [32mPASSED[0m[31m                   [ 43%][0m
+tests/test_nd_backend.py::test_relu[cpu-shape1] [32mPASSED[0m[31m                   [ 44%][0m
+tests/test_nd_backend.py::test_relu[cuda-shape0] [33mSKIPPED[0m (No GPU)[31m        [ 44%][0m
+tests/test_nd_backend.py::test_relu[cuda-shape1] [33mSKIPPED[0m (No GPU)[31m        [ 45%][0m
+tests/test_nd_backend.py::test_tanh[cpu-shape0] [32mPASSED[0m[31m                   [ 46%][0m
+tests/test_nd_backend.py::test_tanh[cpu-shape1] [32mPASSED[0m[31m                   [ 47%][0m
+tests/test_nd_backend.py::test_tanh[cuda-shape0] [33mSKIPPED[0m (No GPU)[31m        [ 48%][0m
+tests/test_nd_backend.py::test_tanh[cuda-shape1] [33mSKIPPED[0m (No GPU)[31m        [ 49%][0m
+tests/test_nd_backend.py::test_tanh_backward[cpu-shape0] [32mPASSED[0m[31m          [ 50%][0m
+tests/test_nd_backend.py::test_tanh_backward[cpu-shape1] [31mFAILED[0m[31m          [ 50%][0m
+tests/test_nd_backend.py::test_tanh_backward[cuda-shape0] [33mSKIPPED[0m (N...)[31m [ 51%][0m
+tests/test_nd_backend.py::test_tanh_backward[cuda-shape1] [33mSKIPPED[0m (N...)[31m [ 52%][0m
+tests/test_nd_backend.py::test_stack[cpu-shape0-0-1] [31mFAILED[0m[31m              [ 53%][0m
+tests/test_nd_backend.py::test_stack[cpu-shape1-0-2] [31mFAILED[0m[31m              [ 54%][0m
+tests/test_nd_backend.py::test_stack[cpu-shape2-2-5] [31mFAILED[0m[31m              [ 55%][0m
+tests/test_nd_backend.py::test_stack[cuda-shape0-0-1] [33mSKIPPED[0m (No GPU)[31m   [ 55%][0m
+tests/test_nd_backend.py::test_stack[cuda-shape1-0-2] [33mSKIPPED[0m (No GPU)[31m   [ 56%][0m
+tests/test_nd_backend.py::test_stack[cuda-shape2-2-5] [33mSKIPPED[0m (No GPU)[31m   [ 57%][0m
+tests/test_nd_backend.py::test_stack_backward[cpu-shape0-0-1] [31mFAILED[0m[31m     [ 58%][0m
+tests/test_nd_backend.py::test_stack_backward[cpu-shape1-0-2] [31mFAILED[0m[31m     [ 59%][0m
+tests/test_nd_backend.py::test_stack_backward[cpu-shape2-2-5] [31mFAILED[0m[31m     [ 60%][0m
+tests/test_nd_backend.py::test_stack_backward[cuda-shape0-0-1] [33mSKIPPED[0m[31m   [ 61%][0m
+tests/test_nd_backend.py::test_stack_backward[cuda-shape1-0-2] [33mSKIPPED[0m[31m   [ 61%][0m
+tests/test_nd_backend.py::test_stack_backward[cuda-shape2-2-5] [33mSKIPPED[0m[31m   [ 62%][0m
+tests/test_nd_backend.py::test_summation[cpu-shape0-None] [32mPASSED[0m[31m         [ 63%][0m
+tests/test_nd_backend.py::test_summation[cpu-shape1-0] [32mPASSED[0m[31m            [ 64%][0m
+tests/test_nd_backend.py::test_summation[cpu-shape2-1] [32mPASSED[0m[31m            [ 65%][0m
+tests/test_nd_backend.py::test_summation[cpu-shape3-2] [32mPASSED[0m[31m            [ 66%][0m
+tests/test_nd_backend.py::test_summation[cuda-shape0-None] [33mSKIPPED[0m (...)[31m [ 66%][0m
+tests/test_nd_backend.py::test_summation[cuda-shape1-0] [33mSKIPPED[0m (No GPU)[31m [ 67%][0m
+tests/test_nd_backend.py::test_summation[cuda-shape2-1] [33mSKIPPED[0m (No GPU)[31m [ 68%][0m
+tests/test_nd_backend.py::test_summation[cuda-shape3-2] [33mSKIPPED[0m (No GPU)[31m [ 69%][0m
+tests/test_nd_backend.py::test_summation_backward[cpu-shape0-None] [31mFAILED[0m[31m [ 70%][0m
+tests/test_nd_backend.py::test_summation_backward[cpu-shape1-0] [31mFAILED[0m[31m   [ 71%][0m
+tests/test_nd_backend.py::test_summation_backward[cpu-shape2-1] [31mFAILED[0m[31m   [ 72%][0m
+tests/test_nd_backend.py::test_summation_backward[cpu-shape3-2] [31mFAILED[0m[31m   [ 72%][0m
+tests/test_nd_backend.py::test_summation_backward[cuda-shape0-None] [33mSKIPPED[0m[31m [ 73%][0m
+tests/test_nd_backend.py::test_summation_backward[cuda-shape1-0] [33mSKIPPED[0m[31m [ 74%][0m
+tests/test_nd_backend.py::test_summation_backward[cuda-shape2-1] [33mSKIPPED[0m[31m [ 75%][0m
+tests/test_nd_backend.py::test_summation_backward[cuda-shape3-2] [33mSKIPPED[0m[31m [ 76%][0m
+tests/test_nd_backend.py::test_broadcast_to[cpu-shape0-shape_to0] [31mFAILED[0m[31m [ 77%][0m
+tests/test_nd_backend.py::test_broadcast_to[cpu-shape1-shape_to1] [31mFAILED[0m[31m [ 77%][0m
+tests/test_nd_backend.py::test_broadcast_to[cuda-shape0-shape_to0] [33mSKIPPED[0m[31m [ 78%][0m
+tests/test_nd_backend.py::test_broadcast_to[cuda-shape1-shape_to1] [33mSKIPPED[0m[31m [ 79%][0m
+tests/test_nd_backend.py::test_reshape[cpu-shape0-shape_to0] [32mPASSED[0m[31m      [ 80%][0m
+tests/test_nd_backend.py::test_reshape[cpu-shape1-shape_to1] [32mPASSED[0m[31m      [ 81%][0m
+tests/test_nd_backend.py::test_reshape[cuda-shape0-shape_to0] [33mSKIPPED[0m[31m    [ 82%][0m
+tests/test_nd_backend.py::test_reshape[cuda-shape1-shape_to1] [33mSKIPPED[0m[31m    [ 83%][0m
+tests/test_nd_backend.py::test_transpose[cpu-axes0-shape0] [32mPASSED[0m[31m        [ 83%][0m
+tests/test_nd_backend.py::test_transpose[cpu-axes0-shape1] [32mPASSED[0m[31m        [ 84%][0m
+tests/test_nd_backend.py::test_transpose[cpu-axes1-shape0] [32mPASSED[0m[31m        [ 85%][0m
+tests/test_nd_backend.py::test_transpose[cpu-axes1-shape1] [32mPASSED[0m[31m        [ 86%][0m
+tests/test_nd_backend.py::test_transpose[cpu-None-shape0] [32mPASSED[0m[31m         [ 87%][0m
+tests/test_nd_backend.py::test_transpose[cpu-None-shape1] [32mPASSED[0m[31m         [ 88%][0m
+tests/test_nd_backend.py::test_transpose[cuda-axes0-shape0] [33mSKIPPED[0m[31m      [ 88%][0m
+tests/test_nd_backend.py::test_transpose[cuda-axes0-shape1] [33mSKIPPED[0m[31m      [ 89%][0m
+tests/test_nd_backend.py::test_transpose[cuda-axes1-shape0] [33mSKIPPED[0m[31m      [ 90%][0m
+tests/test_nd_backend.py::test_transpose[cuda-axes1-shape1] [33mSKIPPED[0m[31m      [ 91%][0m
+tests/test_nd_backend.py::test_transpose[cuda-None-shape0] [33mSKIPPED[0m (...)[31m [ 92%][0m
+tests/test_nd_backend.py::test_transpose[cuda-None-shape1] [33mSKIPPED[0m (...)[31m [ 93%][0m
+tests/test_nd_backend.py::test_logsumexp[cpu-shape0-None] [31mFAILED[0m[31m         [ 94%][0m
+tests/test_nd_backend.py::test_logsumexp[cpu-shape1-0] [31mFAILED[0m[31m            [ 94%][0m
+tests/test_nd_backend.py::test_logsumexp[cpu-shape2-1] [31mFAILED[0m[31m            [ 95%][0m
+tests/test_nd_backend.py::test_logsumexp[cpu-shape3-2] [31mFAILED[0m[31m            [ 96%][0m
+tests/test_nd_backend.py::test_logsumexp[cuda-shape0-None] [33mSKIPPED[0m (...)[31m [ 97%][0m
+tests/test_nd_backend.py::test_logsumexp[cuda-shape1-0] [33mSKIPPED[0m (No GPU)[31m [ 98%][0m
+tests/test_nd_backend.py::test_logsumexp[cuda-shape2-1] [33mSKIPPED[0m (No GPU)[31m [ 99%][0m
+tests/test_nd_backend.py::test_logsumexp[cuda-shape3-2] [33mSKIPPED[0m (No GPU)[31m [100%][0m
+
+=================================== FAILURES ===================================
+[31m[1m__________________________ test_matmul[cpu-16-16-32] ___________________________[0m
+
+m = 16, n = 16, p = 32, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mm,n,p[39;49;00m[33m"[39;49;00m, MATMUL_DIMS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_matmul[39;49;00m(m, n, p, device):[90m[39;49;00m
+        _A = np.random.randn(m, n).astype(np.float32)[90m[39;49;00m
+        _B = np.random.randn(n, p).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+        B = ndl.Tensor(nd.array(_B), device=device)[90m[39;49;00m
+>       np.testing.assert_allclose(_A @ _B, (A @ B).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+
+A          = needle.Tensor([[ 0.7993588   0.01489265  0.7618823   0.42314237 -0.7378046   0.05537529
+  -0.30522415 -0.20304653 -0.0...514616 -1.2945547  -2.0282612   2.2147806  -0.60998374 -0.19773254
+  -1.1516168   1.5212711  -0.36488008 -0.17315696]])
+B          = needle.Tensor([[ 0.03036788 -0.02900854  1.3998724  -1.8398094   0.60762084 -0.6432508
+  -0.4321556  -0.6426842   0.39...78651  0.10203802
+   1.2234045   2.5558736   0.20855476  1.7366973   0.2988114  -0.6695927
+   0.62757087  1.3566512 ]])
+_A         = array([[ 0.7993588 ,  0.01489265,  0.7618823 ,  0.42314237, -0.7378046 ,
+         0.05537529, -0.30522415, -0.20304653...147806 ,
+        -0.60998374, -0.19773254, -1.1516168 ,  1.5212711 , -0.36488008,
+        -0.17315696]], dtype=float32)
+_B         = array([[ 0.03036788, -0.02900854,  1.3998724 , -1.8398094 ,  0.60762084,
+        -0.6432508 , -0.4321556 , -0.6426842 ...     2.5558736 ,  0.20855476,  1.7366973 ,  0.2988114 , -0.6695927 ,
+         0.62757087,  1.3566512 ]], dtype=float32)
+device     = cpu()
+m          = 16
+n          = 16
+p          = 32
+
+[1m[31mtests/test_nd_backend.py[0m:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+args = (<function assert_allclose.<locals>.compare at 0x7f3567c3b1a0>, array([[-0.89362085,  0.8216525 , -0.35610306, -5.3505...
+        -4.71241236e+00, -3.84640002e+00, -4.24587339e-01,
+         3.24520516e+00,  9.00419533e-01]], dtype=float32))
+kwds = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-05, atol=1e-05', 'verbose': True}
+
+    [37m@wraps[39;49;00m(func)[90m[39;49;00m
+    [94mdef[39;49;00m [92minner[39;49;00m(*args, **kwds):[90m[39;49;00m
+        [94mwith[39;49;00m [96mself[39;49;00m._recreate_cm():[90m[39;49;00m
+>           [94mreturn[39;49;00m func(*args, **kwds)[90m[39;49;00m
+[1m[31mE           AssertionError: [0m
+[1m[31mE           Not equal to tolerance rtol=1e-05, atol=1e-05[0m
+[1m[31mE           [0m
+[1m[31mE           Mismatched elements: 512 / 512 (100%)[0m
+[1m[31mE           Max absolute difference: 18.762493[0m
+[1m[31mE           Max relative difference: 266.97186[0m
+[1m[31mE            x: array([[-0.893621,  0.821652, -0.356103, -5.350501,  1.657414, -1.052414,[0m
+[1m[31mE                   -6.028863,  0.224647, -0.779141,  2.10913 ,  4.405077,  2.692249,[0m
+[1m[31mE                   -0.87499 , -4.158949,  1.180667,  3.173532, -1.929656,  1.397839,...[0m
+[1m[31mE            y: array([[ 1.787700e+00,  1.146984e+00,  3.574678e+00,  4.255563e+00,[0m
+[1m[31mE                   -8.443573e-01, -5.654593e+00, -3.014227e-01, -3.506751e+00,[0m
+[1m[31mE                    1.019722e+00, -6.192600e+00, -2.858408e+00, -1.775514e+00,...[0m
+
+args       = (<function assert_allclose.<locals>.compare at 0x7f3567c3b1a0>, array([[-0.89362085,  0.8216525 , -0.35610306, -5.3505...
+        -4.71241236e+00, -3.84640002e+00, -4.24587339e-01,
+         3.24520516e+00,  9.00419533e-01]], dtype=float32))
+func       = <function assert_array_compare at 0x7f3567bfb4c0>
+kwds       = {'equal_nan': True, 'err_msg': '', 'header': 'Not equal to tolerance rtol=1e-05, atol=1e-05', 'verbose': True}
+self       = <contextlib._GeneratorContextManager object at 0x7f356821ee10>
+
+[1m[31m/root/miniconda3/lib/python3.11/contextlib.py[0m:81: AssertionError
+[31m[1m________________________ test_tanh_backward[cpu-shape1] ________________________[0m
+
+shape = (4, 5, 6), device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape[39;49;00m[33m"[39;49;00m, GENERAL_SHAPES)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_tanh_backward[39;49;00m(shape, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       backward_check(ndl.tanh, A)[90m[39;49;00m
+
+A          = needle.Tensor([[[-0.4721669   0.3669966   0.22710867  1.1375109  -2.06138
+    0.8301564 ]
+  [-0.3028795   1.831645   -... 2.1712961   1.1894598
+    0.2548198 ]
+  [-1.6722503  -0.33953708 -0.6779228   0.01023871  0.7156316
+    1.8746282 ]]])
+_A         = array([[[-0.47216693,  0.36699656,  0.22710867,  1.1375109 ,
+         -2.06138   ,  0.8301564 ],
+        [-0.30287954,...978],
+        [-1.6722503 , -0.3395371 , -0.6779228 ,  0.01023871,
+          0.7156316 ,  1.8746282 ]]], dtype=float32)
+device     = cpu()
+shape      = (4, 5, 6)
+
+[1m[31mtests/test_nd_backend.py[0m:142: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+f = <function tanh at 0x7f3611d96ac0>
+args = (needle.Tensor([[[-0.4721669   0.3669966   0.22710867  1.1375109  -2.06138
+    0.8301564 ]
+  [-0.3028795   1.831645   ....1712961   1.1894598
+    0.2548198 ]
+  [-1.6722503  -0.33953708 -0.6779228   0.01023871  0.7156316
+    1.8746282 ]]]),)
+kwargs = {}, eps = 1e-05
+out = needle.Tensor([[[-0.43994853  0.3513618   0.22328295  0.81357425 -0.968117
+    0.68056   ]
+  [-0.29394558  0.94998676 ...0.9743282   0.83041126
+    0.24944395]
+  [-0.9318486  -0.32706407 -0.5901673   0.01023836  0.6141962
+    0.95401186]]])
+c = array([[[-0.52283683, -0.28144079, -0.68868721, -0.48341087,
+          1.8093601 ,  1.67225938],
+        [ 0.80163995,...19001, -0.65450956],
+        [-1.48952386,  0.47792073,  0.15860762,  2.86872879,
+         -1.21633123, -0.24542033]]])
+num_args = 1, i = 0, j = 119, f1 = -1.5418720878799146, f2 = -1.5418716490341735
+error = 16.637247050113633, @py_assert2 = 0.42
+
+    [94mdef[39;49;00m [92mbackward_check[39;49;00m(f, *args, **kwargs):[90m[39;49;00m
+        eps = [94m1e-5[39;49;00m[90m[39;49;00m
+        out = f(*args, **kwargs)[90m[39;49;00m
+        c = np.random.randn(*out.shape)[90m[39;49;00m
+        numerical_grad = [np.zeros(a.shape) [94mfor[39;49;00m a [95min[39;49;00m args][90m[39;49;00m
+        num_args = [96mlen[39;49;00m(args)[90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(num_args):[90m[39;49;00m
+            [94mfor[39;49;00m j [95min[39;49;00m [96mrange[39;49;00m(args[i].realize_cached_data().size):[90m[39;49;00m
+                args[i].realize_cached_data().flat[j] += eps[90m[39;49;00m
+                f1 = (f(*args, **kwargs).numpy() * c).sum()[90m[39;49;00m
+                args[i].realize_cached_data().flat[j] -= [94m2[39;49;00m * eps[90m[39;49;00m
+                f2 = (f(*args, **kwargs).numpy() * c).sum()[90m[39;49;00m
+                args[i].realize_cached_data().flat[j] += eps[90m[39;49;00m
+                numerical_grad[i].flat[j] = (f1 - f2) / ([94m2[39;49;00m * eps)[90m[39;49;00m
+        backward_grad = out.op.gradient_as_tuple(ndl.Tensor(c, device=args[[94m0[39;49;00m].device), out)[90m[39;49;00m
+        error = [96msum[39;49;00m([90m[39;49;00m
+            np.linalg.norm(backward_grad[i].numpy() - numerical_grad[i])[90m[39;49;00m
+            [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m([96mlen[39;49;00m(args))[90m[39;49;00m
+        )[90m[39;49;00m
+>       [94massert[39;49;00m error < [94m4.2e-1[39;49;00m[90m[39;49;00m
+[1m[31mE       assert 16.637247050113633 < 0.42[0m
+
+args       = (needle.Tensor([[[-0.4721669   0.3669966   0.22710867  1.1375109  -2.06138
+    0.8301564 ]
+  [-0.3028795   1.831645   ....1712961   1.1894598
+    0.2548198 ]
+  [-1.6722503  -0.33953708 -0.6779228   0.01023871  0.7156316
+    1.8746282 ]]]),)
+backward_grad = (needle.Tensor([[[ 0.42163932  0.24669547  0.6543525   0.16343972 -0.11353645
+   -0.89773244]
+  [-0.7323751  -0.147558...01850798 -0.4467493
+    0.61378443]
+  [ 0.19610803 -0.42679712 -0.103365   -2.868428    0.75748616
+    0.02205381]]]),)
+c          = array([[[-0.52283683, -0.28144079, -0.68868721, -0.48341087,
+          1.8093601 ,  1.67225938],
+        [ 0.80163995,...19001, -0.65450956],
+        [-1.48952386,  0.47792073,  0.15860762,  2.86872879,
+         -1.21633123, -0.24542033]]])
+eps        = 1e-05
+error      = 16.637247050113633
+f          = <function tanh at 0x7f3611d96ac0>
+f1         = -1.5418720878799146
+f2         = -1.5418716490341735
+i          = 0
+j          = 119
+kwargs     = {}
+num_args   = 1
+numerical_grad = [array([[[-0.4207073 , -0.24659512, -0.65473086, -0.16423714,
+          0.11323858,  0.90205356],
+        [ 0.73225094...6853, -0.61346071],
+        [-0.19532159,  0.42800659,  0.10351857,  2.86848346,
+         -0.75761446, -0.02194229]]])]
+out        = needle.Tensor([[[-0.43994853  0.3513618   0.22328295  0.81357425 -0.968117
+    0.68056   ]
+  [-0.29394558  0.94998676 ...0.9743282   0.83041126
+    0.24944395]
+  [-0.9318486  -0.32706407 -0.5901673   0.01023836  0.6141962
+    0.95401186]]])
+
+[1m[31mtests/test_nd_backend.py[0m:33: AssertionError
+[31m[1m__________________________ test_stack[cpu-shape0-0-1] __________________________[0m
+
+shape = (5, 5), axis = 0, l = 1, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+>       out = ndl.stack(A, axis=axis)[90m[39;49;00m
+
+A          = [needle.Tensor([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.519958   -0.30788484  0...532   0.26154587  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]])]
+A_t        = [tensor([[-0.6125,  1.3737,  0.4844, -0.6617, -0.2174],
+        [ 1.5044,  0.5200, -0.3079,  0.2092,  1.2965],
+       ....4291],
+        [-0.0841,  0.2615,  0.0096,  0.2161, -0.9481],
+        [ 1.4392, -0.1531, -1.6340,  0.4543,  0.8075]])]
+_A         = [array([[-0.6124605 ,  1.3737231 ,  0.4844483 , -0.6617336 , -0.21739863],
+       [ 1.5044237 ,  0.519958  , -0.307884...1613978, -0.94807494],
+       [ 1.4392298 , -0.15309893, -1.6340097 ,  0.45426646,  0.8074966 ]],
+      dtype=float32)]
+axis       = 0
+device     = cpu()
+l          = 1
+shape      = (5, 5)
+
+[1m[31mtests/test_nd_backend.py[0m:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.519958   -0.30788484  0...532   0.26154587  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]])]
+        axis       = 0
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.5199...   0.26154587  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]]),),)
+        self       = <needle.ops.Stack object at 0x7f35680cf590>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.5199...   0.26154587  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]]),),)
+        op         = <needle.ops.Stack object at 0x7f35680cf590>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f35680cc8d0>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f35680cc8d0>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f35680cf590>
+args = (NDArray([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.519958   -0.30788484  0.20923...7  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]], device=cpu()),)
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[-0.6124605   1.3737231   0.4844483  -0.6617336  -0.21739863]
+ [ 1.5044237   0.519958   -0.30788484  0.20923...7  0.00964714  0.21613978 -0.94807494]
+ [ 1.4392298  -0.15309893 -1.6340097   0.45426646  0.8074966 ]], device=cpu()),)
+self       = <needle.ops.Stack object at 0x7f35680cf590>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m__________________________ test_stack[cpu-shape1-0-2] __________________________[0m
+
+shape = (5, 5), axis = 0, l = 2, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+>       out = ndl.stack(A, axis=axis)[90m[39;49;00m
+
+A          = [needle.Tensor([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3.6245832e-01 -1.710...9092 -0.684758   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]])]
+A_t        = [tensor([[-2.3689e-01, -1.0309e-01,  1.9945e+00, -1.0532e-02, -5.6480e-01],
+        [-3.6246e-01, -1.7103e+00, -5.4480....4669],
+        [ 0.2768, -0.6848, -1.0879, -0.2695, -0.9857],
+        [-0.5832,  0.9462,  1.3557, -1.1373,  1.1199]])]
+_A         = [array([[-2.3688808e-01, -1.0309437e-01,  1.9945302e+00, -1.0532110e-02,
+        -5.6480056e-01],
+       [-3.6245832e-...6948956, -0.98570263],
+       [-0.5831707 ,  0.9461903 ,  1.355699  , -1.1373338 ,  1.1199485 ]],
+      dtype=float32)]
+axis       = 0
+device     = cpu()
+l          = 2
+shape      = (5, 5)
+
+[1m[31mtests/test_nd_backend.py[0m:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3.6245832e-01 -1.710...9092 -0.684758   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]])]
+        axis       = 0
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3...92 -0.684758   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]])),)
+        self       = <needle.ops.Stack object at 0x7f35682b2290>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3...92 -0.684758   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]])),)
+        op         = <needle.ops.Stack object at 0x7f35682b2290>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f35682aa550>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f35682aa550>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f35682b2290>
+args = (NDArray([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3.6245832e-01 -1.7103438e+...   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]], device=cpu()))
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[-2.3688808e-01 -1.0309437e-01  1.9945302e+00 -1.0532110e-02
+  -5.6480056e-01]
+ [-3.6245832e-01 -1.7103438e+...   -1.0879021  -0.26948956 -0.98570263]
+ [-0.5831707   0.9461903   1.355699   -1.1373338   1.1199485 ]], device=cpu()))
+self       = <needle.ops.Stack object at 0x7f35682b2290>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m__________________________ test_stack[cpu-shape2-2-5] __________________________[0m
+
+shape = (1, 5, 7), axis = 2, l = 5, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+>       out = ndl.stack(A, axis=axis)[90m[39;49;00m
+
+A          = [needle.Tensor([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314031 ]
+  [ 0.1466165...-1.1756554   0.9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]])]
+A_t        = [tensor([[[-1.2413, -0.0637,  1.2021,  0.4384,  1.2240, -0.8774, -0.3314],
+         [ 0.1466,  0.6873,  0.1743, -1.300...1836, -0.0703,  0.8168, -1.1757,  0.9251],
+         [-1.8334, -0.1215, -0.2484, -0.9815, -0.3400,  0.6005, -0.1644]]])]
+_A         = [array([[[-1.2413377 , -0.06365192,  1.2021321 ,  0.43842655,
+          1.2239525 , -0.87744874, -0.3314031 ],
+       ...[-1.833381  , -0.12152866, -0.24837455, -0.9814549 ,
+         -0.34001312,  0.60049605, -0.16438355]]], dtype=float32)]
+axis       = 2
+device     = cpu()
+l          = 5
+shape      = (1, 5, 7)
+
+[1m[31mtests/test_nd_backend.py[0m:154: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314031 ]
+  [ 0.1466165...-1.1756554   0.9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]])]
+        axis       = 2
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314....1756554   0.9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]])),)
+        self       = <needle.ops.Stack object at 0x7f3565ba8c90>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314....1756554   0.9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]])),)
+        op         = <needle.ops.Stack object at 0x7f3565ba8c90>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565ba8990>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565ba8990>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f3565ba8c90>
+args = (NDArray([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314031 ]
+  [ 0.14661652  0.6....9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]], device=cpu()))
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[[-1.2413377  -0.06365192  1.2021321   0.43842655  1.2239525
+   -0.87744874 -0.3314031 ]
+  [ 0.14661652  0.6....9250884 ]
+  [-1.833381   -0.12152866 -0.24837455 -0.9814549  -0.34001312
+    0.60049605 -0.16438355]]], device=cpu()))
+self       = <needle.ops.Stack object at 0x7f3565ba8c90>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m_____________________ test_stack_backward[cpu-shape0-0-1] ______________________[0m
+
+shape = (5, 5), axis = 0, l = 1, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack_backward[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l):[90m[39;49;00m
+            A_t[i].requires_grad = [94mTrue[39;49;00m[90m[39;49;00m
+>       ndl.stack(A, axis=axis).sum().backward()[90m[39;49;00m
+
+A          = [needle.Tensor([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087523   0.12723175  0...966   0.96413904  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]])]
+A_t        = [tensor([[-0.2053, -1.6296, -1.7719,  0.0783, -0.1539],
+        [-1.0797,  0.6088,  0.1272,  0.5082,  0.7878],
+       ...8137,  0.9641,  1.4183, -0.6077, -0.8496],
+        [-2.2806,  0.0917,  0.6934, -0.2337,  0.3600]], requires_grad=True)]
+_A         = [array([[-0.2052765 , -1.6295726 , -1.7718803 ,  0.07834701, -0.15388085],
+       [-1.0797265 ,  0.6087523 ,  0.127231...076717 , -0.84955657],
+       [-2.2805736 ,  0.09174483,  0.69337326, -0.23374121,  0.35996845]],
+      dtype=float32)]
+axis       = 0
+device     = cpu()
+i          = 0
+l          = 1
+shape      = (5, 5)
+
+[1m[31mtests/test_nd_backend.py[0m:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087523   0.12723175  0...966   0.96413904  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]])]
+        axis       = 0
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087...   0.96413904  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]]),),)
+        self       = <needle.ops.Stack object at 0x7f3565ac14d0>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087...   0.96413904  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]]),),)
+        op         = <needle.ops.Stack object at 0x7f3565ac14d0>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565ac1650>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565ac1650>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f3565ac14d0>
+args = (NDArray([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087523   0.12723175  0.50820...4  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]], device=cpu()),)
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[-0.2052765  -1.6295726  -1.7718803   0.07834701 -0.15388085]
+ [-1.0797265   0.6087523   0.12723175  0.50820...4  1.4183148  -0.6076717  -0.84955657]
+ [-2.2805736   0.09174483  0.69337326 -0.23374121  0.35996845]], device=cpu()),)
+self       = <needle.ops.Stack object at 0x7f3565ac14d0>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m_____________________ test_stack_backward[cpu-shape1-0-2] ______________________[0m
+
+shape = (5, 5), axis = 0, l = 2, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack_backward[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l):[90m[39;49;00m
+            A_t[i].requires_grad = [94mTrue[39;49;00m[90m[39;49;00m
+>       ndl.stack(A, axis=axis).sum().backward()[90m[39;49;00m
+
+A          = [needle.Tensor([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.22815192  0.17047247  0...297   0.2660959  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]])]
+A_t        = [tensor([[ 0.9691, -0.2839,  0.3329, -0.4283,  0.9319],
+        [ 0.1597,  0.2282,  0.1705,  0.4286, -2.0502],
+       ...9734,  0.2661, -0.2480,  0.3958,  0.4546],
+        [-1.3474,  0.5228,  1.1010, -2.0672, -0.5026]], requires_grad=True)]
+_A         = [array([[ 0.9690866 , -0.28394625,  0.33293626, -0.42827228,  0.93194336],
+       [ 0.1597074 ,  0.22815192,  0.170472...958428 ,  0.45457375],
+       [-1.3473928 ,  0.5227974 ,  1.1009963 , -2.0672407 , -0.5026022 ]],
+      dtype=float32)]
+axis       = 0
+device     = cpu()
+i          = 1
+l          = 2
+shape      = (5, 5)
+
+[1m[31mtests/test_nd_backend.py[0m:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.22815192  0.17047247  0...297   0.2660959  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]])]
+        axis       = 0
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.2281...7   0.2660959  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]])),)
+        self       = <needle.ops.Stack object at 0x7f3569cad890>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.2281...7   0.2660959  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]])),)
+        op         = <needle.ops.Stack object at 0x7f3569cad890>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3567c73850>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3567c73850>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f3569cad890>
+args = (NDArray([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.22815192  0.17047247  0.42864...9  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]], device=cpu()))
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[ 0.9690866  -0.28394625  0.33293626 -0.42827228  0.93194336]
+ [ 0.1597074   0.22815192  0.17047247  0.42864...9  -0.24795476  0.3958428   0.45457375]
+ [-1.3473928   0.5227974   1.1009963  -2.0672407  -0.5026022 ]], device=cpu()))
+self       = <needle.ops.Stack object at 0x7f3569cad890>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m_____________________ test_stack_backward[cpu-shape2-2-5] ______________________[0m
+
+shape = (1, 5, 7), axis = 2, l = 5, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axis, l[39;49;00m[33m"[39;49;00m, STACK_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_stack_backward[39;49;00m(shape, axis, l, device):[90m[39;49;00m
+        _A = [np.random.randn(*shape).astype(np.float32) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A = [ndl.Tensor(nd.array(_A[i]), device=device) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        A_t = [torch.Tensor(_A[i]) [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l)][90m[39;49;00m
+        [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(l):[90m[39;49;00m
+            A_t[i].requires_grad = [94mTrue[39;49;00m[90m[39;49;00m
+>       ndl.stack(A, axis=axis).sum().backward()[90m[39;49;00m
+
+A          = [needle.Tensor([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.86407554]
+  [ 0.1507101...   0.6039443  -1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]])]
+A_t        = [tensor([[[ 0.5754,  0.1983,  0.3359,  0.7330,  1.9779,  0.7161, -0.8641],
+         [ 0.1507,  0.1197,  0.4539, -0.213...6039, -1.0119],
+         [ 0.4485, -0.7157, -0.2840,  1.3041,  1.3879,  1.4734, -0.6874]]],
+       requires_grad=True)]
+_A         = [array([[[ 0.575385  ,  0.19826922,  0.3358586 ,  0.7329904 ,
+          1.9778988 ,  0.7161346 , -0.86407554],
+       ...[ 0.44852072, -0.7156536 , -0.28398412,  1.3041083 ,
+          1.387943  ,  1.4733936 , -0.68743455]]], dtype=float32)]
+axis       = 2
+device     = cpu()
+i          = 4
+l          = 5
+shape      = (1, 5, 7)
+
+[1m[31mtests/test_nd_backend.py[0m:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:479: in stack
+    [94mreturn[39;49;00m Stack(axis)(make_tuple(*args))[90m[39;49;00m
+        args       = [needle.Tensor([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.86407554]
+  [ 0.1507101...   0.6039443  -1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]])]
+        axis       = 2
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.TensorTuple(needle.Tensor([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.8640... 0.6039443  -1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]])),)
+        self       = <needle.ops.Stack object at 0x7f3565a74190>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.TensorTuple(needle.Tensor([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.8640... 0.6039443  -1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]])),)
+        op         = <needle.ops.Stack object at 0x7f3565a74190>
+        tensor     = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565a76e10>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[NotImplementedError() raised in repr()] Tensor object at 0x7f3565a76e10>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Stack object at 0x7f3565a74190>
+args = (NDArray([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.86407554]
+  [ 0.15071017  0.1...-1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]], device=cpu()))
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, args):[90m[39;49;00m
+        [90m### BEGIN YOUR SOLUTION[39;49;00m[90m[39;49;00m
+>       [94mraise[39;49;00m [96mNotImplementedError[39;49;00m()[90m[39;49;00m
+[1m[31mE       NotImplementedError[0m
+
+args       = (NDArray([[[ 0.575385    0.19826922  0.3358586   0.7329904   1.9778988
+    0.7161346  -0.86407554]
+  [ 0.15071017  0.1...-1.0119154 ]
+  [ 0.44852072 -0.7156536  -0.28398412  1.3041083   1.387943
+    1.4733936  -0.68743455]]], device=cpu()))
+self       = <needle.ops.Stack object at 0x7f3565a74190>
+
+[1m[31mpython/needle/ops.py[0m:469: NotImplementedError
+[31m[1m___________________ test_summation_backward[cpu-shape0-None] ___________________[0m
+
+shape = (1, 1, 1), axes = None, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_summation_backward[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       backward_check(ndl.summation, A, axes=axes)[90m[39;49;00m
+
+A          = needle.Tensor([[[0.7941862]]])
+_A         = array([[[0.7941862]]], dtype=float32)
+axes       = None
+device     = cpu()
+shape      = (1, 1, 1)
+
+[1m[31mtests/test_nd_backend.py[0m:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mtests/test_nd_backend.py[0m:28: in backward_check
+    backward_grad = out.op.gradient_as_tuple(ndl.Tensor(c, device=args[[94m0[39;49;00m].device), out)[90m[39;49;00m
+        args       = (needle.Tensor([[[0.7941862]]]),)
+        c          = array([1.34969763])
+        eps        = 1e-05
+        f          = <function summation at 0x7f3611d959e0>
+        f1         = 1.0719247120791726
+        f2         = 1.0718976814679462
+        i          = 0
+        j          = 0
+        kwargs     = {'axes': None}
+        num_args   = 1
+        numerical_grad = [array([[[1.35153056]]])]
+        out        = needle.Tensor([0.7941862])
+[1m[31mpython/needle/autograd.py[0m:60: in gradient_as_tuple
+    output = [96mself[39;49;00m.gradient(out_grad, node)[90m[39;49;00m
+        node       = needle.Tensor([0.7941862])
+        out_grad   = needle.Tensor([1.3496976])
+        self       = <needle.ops.Summation object at 0x7f3565a60790>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Summation object at 0x7f3565a60790>
+out_grad = needle.Tensor([1.3496976]), node = needle.Tensor([0.7941862])
+
+    [94mdef[39;49;00m [92mgradient[39;49;00m([96mself[39;49;00m, out_grad, node):[90m[39;49;00m
+        shape = node.inputs[[94m0[39;49;00m].shape[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Get the out_shape to broadcast[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m.axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+>           shape_out = [[94m1[39;49;00m [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(shape)][90m[39;49;00m
+[1m[31mE           TypeError: 'tuple' object cannot be interpreted as an integer[0m
+
+node       = needle.Tensor([0.7941862])
+out_grad   = needle.Tensor([1.3496976])
+self       = <needle.ops.Summation object at 0x7f3565a60790>
+shape      = (1, 1, 1)
+
+[1m[31mpython/needle/ops.py[0m:288: TypeError
+[31m[1m____________________ test_summation_backward[cpu-shape1-0] _____________________[0m
+
+shape = (5, 3), axes = 0, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_summation_backward[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       backward_check(ndl.summation, A, axes=axes)[90m[39;49;00m
+
+A          = needle.Tensor([[ 0.23344408  0.9310953   0.37724382]
+ [ 0.08980291 -0.44500133  0.39262608]
+ [-1.3748187  -1.0438015  -1.4479293 ]
+ [ 0.16030224  0.4213624  -0.27678043]
+ [-0.6100461  -0.8055568  -0.78740907]])
+_A         = array([[ 0.23344408,  0.9310953 ,  0.3772438 ],
+       [ 0.08980291, -0.44500136,  0.39262605],
+       [-1.3748187 , -...9293 ],
+       [ 0.16030224,  0.42136237, -0.27678046],
+       [-0.6100461 , -0.8055568 , -0.78740907]], dtype=float32)
+axes       = 0
+device     = cpu()
+shape      = (5, 3)
+
+[1m[31mtests/test_nd_backend.py[0m:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mtests/test_nd_backend.py[0m:28: in backward_check
+    backward_grad = out.op.gradient_as_tuple(ndl.Tensor(c, device=args[[94m0[39;49;00m].device), out)[90m[39;49;00m
+        args       = (needle.Tensor([[ 0.23344408  0.9310953   0.37724382]
+ [ 0.08980291 -0.44500133  0.39262608]
+ [-1.3748187  -1.0438015  -1.4479293 ]
+ [ 0.16030224  0.4213624  -0.27678043]
+ [-0.6100461  -0.8055568  -0.78740907]]),)
+        c          = array([-0.75153325, -1.23833141,  0.0258553 ])
+        eps        = 1e-05
+        f          = <function summation at 0x7f3611d959e0>
+        f1         = 2.249629219820023
+        f2         = 2.2496287020116914
+        i          = 0
+        j          = 14
+        kwargs     = {'axes': 0}
+        num_args   = 1
+        numerical_grad = [array([[-0.74807437, -1.24001311,  0.02573631],
+       [-0.74807437, -1.23263208,  0.02589042],
+       [-0.75255386, ...001311,  0.02589042],
+       [-0.75255386, -1.24001311,  0.02573631],
+       [-0.75255386, -1.24001311,  0.02589042]])]
+        out        = needle.Tensor([-1.5013156  -0.94190204 -1.742249  ])
+[1m[31mpython/needle/autograd.py[0m:60: in gradient_as_tuple
+    output = [96mself[39;49;00m.gradient(out_grad, node)[90m[39;49;00m
+        node       = needle.Tensor([-1.5013156  -0.94190204 -1.742249  ])
+        out_grad   = needle.Tensor([-0.75153327 -1.2383314   0.0258553 ])
+        self       = <needle.ops.Summation object at 0x7f3567e36a10>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Summation object at 0x7f3567e36a10>
+out_grad = needle.Tensor([-0.75153327 -1.2383314   0.0258553 ])
+node = needle.Tensor([-1.5013156  -0.94190204 -1.742249  ])
+
+    [94mdef[39;49;00m [92mgradient[39;49;00m([96mself[39;49;00m, out_grad, node):[90m[39;49;00m
+        shape = node.inputs[[94m0[39;49;00m].shape[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Get the out_shape to broadcast[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m.axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            shape_out = [[94m1[39;49;00m [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(shape)][90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m([96mself[39;49;00m.axes, [96mint[39;49;00m):[90m[39;49;00m
+                axes = [[96mself[39;49;00m.axes][90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                axes = [96mself[39;49;00m.axes[90m[39;49;00m
+            shape_out = shape[90m[39;49;00m
+            [94mfor[39;49;00m index [95min[39;49;00m axes:[90m[39;49;00m
+>               shape_out[index] = [94m1[39;49;00m [90m# have been sumed.[39;49;00m[90m[39;49;00m
+[1m[31mE               TypeError: 'tuple' object does not support item assignment[0m
+
+axes       = [0]
+index      = 0
+node       = needle.Tensor([-1.5013156  -0.94190204 -1.742249  ])
+out_grad   = needle.Tensor([-0.75153327 -1.2383314   0.0258553 ])
+self       = <needle.ops.Summation object at 0x7f3567e36a10>
+shape      = (5, 3)
+shape_out  = (5, 3)
+
+[1m[31mpython/needle/ops.py[0m:296: TypeError
+[31m[1m____________________ test_summation_backward[cpu-shape2-1] _____________________[0m
+
+shape = (8, 3, 2), axes = 1, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_summation_backward[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       backward_check(ndl.summation, A, axes=axes)[90m[39;49;00m
+
+A          = needle.Tensor([[[-0.02689702 -0.19400224]
+  [ 2.0804594  -2.0084236 ]
+  [-1.6567076   0.7220761 ]]
+
+ [[-0.35009417  1.... ]
+  [ 0.33569387  1.169932  ]]
+
+ [[ 1.0096467  -1.3771114 ]
+  [-0.00430126  0.1227758 ]
+  [ 0.7358255  -0.91958135]]])
+_A         = array([[[-0.02689702, -0.19400224],
+        [ 2.0804594 , -2.0084236 ],
+        [-1.6567076 ,  0.7220761 ]],
+
+       [...  [[ 1.0096467 , -1.3771114 ],
+        [-0.00430126,  0.1227758 ],
+        [ 0.7358255 , -0.91958135]]], dtype=float32)
+axes       = 1
+device     = cpu()
+shape      = (8, 3, 2)
+
+[1m[31mtests/test_nd_backend.py[0m:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mtests/test_nd_backend.py[0m:28: in backward_check
+    backward_grad = out.op.gradient_as_tuple(ndl.Tensor(c, device=args[[94m0[39;49;00m].device), out)[90m[39;49;00m
+        args       = (needle.Tensor([[[-0.02689702 -0.19400224]
+  [ 2.0804594  -2.0084236 ]
+  [-1.6567076   0.7220761 ]]
+
+ [[-0.35009417  1...
+  [ 0.33569387  1.169932  ]]
+
+ [[ 1.0096467  -1.3771114 ]
+  [-0.00430126  0.1227758 ]
+  [ 0.7358255  -0.91958135]]]),)
+        c          = array([[-1.22137761e+00, -1.05617922e+00],
+       [-1.43800525e+00,  1.14267742e+00],
+       [-1.24440968e+00, -1.0569....27352099e+00, -1.55224775e-01],
+       [ 1.56377664e-01, -4.92785105e-01],
+       [ 1.03871966e+00, -2.37139022e-01]])
+        eps        = 1e-05
+        f          = <function summation at 0x7f3611d959e0>
+        f1         = -4.198374718714982
+        f2         = -4.198369969493697
+        i          = 0
+        j          = 47
+        kwargs     = {'axes': 1}
+        num_args   = 1
+        numerical_grad = [array([[[-1.22303628e+00, -1.05761354e+00],
+        [-1.22303628e+00, -1.05761354e+00],
+        [-1.22303628e+00, -1....13027e+00, -2.37461064e-01],
+        [ 1.04013027e+00, -2.37461064e-01],
+        [ 1.04013027e+00, -2.37461064e-01]]])]
+        out        = needle.Tensor([[ 0.39685476 -1.4803495 ]
+ [ 0.09421811  0.55572706]
+ [ 1.8835223   0.23552436]
+ [ 2.3110209  -2.1932673 ]
+ [ 2.4504905   2.5600302 ]
+ [ 1.0251415  -1.48261   ]
+ [ 0.09816854  0.7419635 ]
+ [ 1.7411709  -2.173917  ]])
+[1m[31mpython/needle/autograd.py[0m:60: in gradient_as_tuple
+    output = [96mself[39;49;00m.gradient(out_grad, node)[90m[39;49;00m
+        node       = needle.Tensor([[ 0.39685476 -1.4803495 ]
+ [ 0.09421811  0.55572706]
+ [ 1.8835223   0.23552436]
+ [ 2.3110209  -2.1932673 ]
+ [ 2.4504905   2.5600302 ]
+ [ 1.0251415  -1.48261   ]
+ [ 0.09816854  0.7419635 ]
+ [ 1.7411709  -2.173917  ]])
+        out_grad   = needle.Tensor([[-1.2213776e+00 -1.0561792e+00]
+ [-1.4380052e+00  1.1426774e+00]
+ [-1.2444097e+00 -1.0569861e+00]
+ [-2....00  4.0397644e-01]
+ [-1.2735209e+00 -1.5522477e-01]
+ [ 1.5637766e-01 -4.9278510e-01]
+ [ 1.0387197e+00 -2.3713902e-01]])
+        self       = <needle.ops.Summation object at 0x7f35682b6990>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Summation object at 0x7f35682b6990>
+out_grad = needle.Tensor([[-1.2213776e+00 -1.0561792e+00]
+ [-1.4380052e+00  1.1426774e+00]
+ [-1.2444097e+00 -1.0569861e+00]
+ [-2....00  4.0397644e-01]
+ [-1.2735209e+00 -1.5522477e-01]
+ [ 1.5637766e-01 -4.9278510e-01]
+ [ 1.0387197e+00 -2.3713902e-01]])
+node = needle.Tensor([[ 0.39685476 -1.4803495 ]
+ [ 0.09421811  0.55572706]
+ [ 1.8835223   0.23552436]
+ [ 2.3110209  -2.1932673 ]
+ [ 2.4504905   2.5600302 ]
+ [ 1.0251415  -1.48261   ]
+ [ 0.09816854  0.7419635 ]
+ [ 1.7411709  -2.173917  ]])
+
+    [94mdef[39;49;00m [92mgradient[39;49;00m([96mself[39;49;00m, out_grad, node):[90m[39;49;00m
+        shape = node.inputs[[94m0[39;49;00m].shape[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Get the out_shape to broadcast[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m.axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            shape_out = [[94m1[39;49;00m [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(shape)][90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m([96mself[39;49;00m.axes, [96mint[39;49;00m):[90m[39;49;00m
+                axes = [[96mself[39;49;00m.axes][90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                axes = [96mself[39;49;00m.axes[90m[39;49;00m
+            shape_out = shape[90m[39;49;00m
+            [94mfor[39;49;00m index [95min[39;49;00m axes:[90m[39;49;00m
+>               shape_out[index] = [94m1[39;49;00m [90m# have been sumed.[39;49;00m[90m[39;49;00m
+[1m[31mE               TypeError: 'tuple' object does not support item assignment[0m
+
+axes       = [1]
+index      = 1
+node       = needle.Tensor([[ 0.39685476 -1.4803495 ]
+ [ 0.09421811  0.55572706]
+ [ 1.8835223   0.23552436]
+ [ 2.3110209  -2.1932673 ]
+ [ 2.4504905   2.5600302 ]
+ [ 1.0251415  -1.48261   ]
+ [ 0.09816854  0.7419635 ]
+ [ 1.7411709  -2.173917  ]])
+out_grad   = needle.Tensor([[-1.2213776e+00 -1.0561792e+00]
+ [-1.4380052e+00  1.1426774e+00]
+ [-1.2444097e+00 -1.0569861e+00]
+ [-2....00  4.0397644e-01]
+ [-1.2735209e+00 -1.5522477e-01]
+ [ 1.5637766e-01 -4.9278510e-01]
+ [ 1.0387197e+00 -2.3713902e-01]])
+self       = <needle.ops.Summation object at 0x7f35682b6990>
+shape      = (8, 3, 2)
+shape_out  = (8, 3, 2)
+
+[1m[31mpython/needle/ops.py[0m:296: TypeError
+[31m[1m____________________ test_summation_backward[cpu-shape3-2] _____________________[0m
+
+shape = (8, 3, 2), axes = 2, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_summation_backward[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       backward_check(ndl.summation, A, axes=axes)[90m[39;49;00m
+
+A          = needle.Tensor([[[ 0.8904739   1.3739494 ]
+  [-0.770988   -0.12601596]
+  [ 0.08510068  0.04601207]]
+
+ [[-0.8961486  -0....5]
+  [ 0.41038346 -1.5240749 ]]
+
+ [[-0.19955744 -1.1878814 ]
+  [-0.14072895  1.2199931 ]
+  [ 0.94904715  0.44161955]]])
+_A         = array([[[ 0.8904739 ,  1.3739494 ],
+        [-0.770988  , -0.12601596],
+        [ 0.08510068,  0.04601208]],
+
+       [...  [[-0.19955744, -1.1878814 ],
+        [-0.14072895,  1.2199931 ],
+        [ 0.94904715,  0.44161952]]], dtype=float32)
+axes       = 2
+device     = cpu()
+shape      = (8, 3, 2)
+
+[1m[31mtests/test_nd_backend.py[0m:191: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mtests/test_nd_backend.py[0m:28: in backward_check
+    backward_grad = out.op.gradient_as_tuple(ndl.Tensor(c, device=args[[94m0[39;49;00m].device), out)[90m[39;49;00m
+        args       = (needle.Tensor([[[ 0.8904739   1.3739494 ]
+  [-0.770988   -0.12601596]
+  [ 0.08510068  0.04601207]]
+
+ [[-0.8961486  -0...
+  [ 0.41038346 -1.5240749 ]]
+
+ [[-0.19955744 -1.1878814 ]
+  [-0.14072895  1.2199931 ]
+  [ 0.94904715  0.44161955]]]),)
+        c          = array([[-0.65610276,  0.31842404, -0.66763719],
+       [-2.51589011, -0.85329754,  1.56163412],
+       [-0.91157531,  ...2835483,  0.04041772],
+       [-0.91284176, -0.4985536 ,  0.78827907],
+       [-1.18548151, -0.35386648,  1.28056333]])
+        eps        = 1e-05
+        f          = <function summation at 0x7f3611d959e0>
+        f1         = 7.7049116990381865
+        f2         = 7.704886052990756
+        i          = 0
+        j          = 47
+        kwargs     = {'axes': 2}
+        num_args   = 1
+        numerical_grad = [array([[[-0.65699377, -0.65699377],
+        [ 0.31885647,  0.31885647],
+        [-0.66754901, -0.66754901]],
+
+       ...4958]],
+
+       [[-1.18709143, -1.18709143],
+        [-0.35434704, -0.35434704],
+        [ 1.28230237,  1.28230237]]])]
+        out        = needle.Tensor([[ 2.2644234  -0.89700395  0.13111275]
+ [-1.10567    -0.63945633  0.5560729 ]
+ [-0.1460402   0.0876966  ...
+ [ 1.7674885  -0.09478217  0.6280034 ]
+ [ 0.03549606 -0.24754915 -1.1136914 ]
+ [-1.3874388   1.0792642   1.3906667 ]])
+[1m[31mpython/needle/autograd.py[0m:60: in gradient_as_tuple
+    output = [96mself[39;49;00m.gradient(out_grad, node)[90m[39;49;00m
+        node       = needle.Tensor([[ 2.2644234  -0.89700395  0.13111275]
+ [-1.10567    -0.63945633  0.5560729 ]
+ [-0.1460402   0.0876966  ...
+ [ 1.7674885  -0.09478217  0.6280034 ]
+ [ 0.03549606 -0.24754915 -1.1136914 ]
+ [-1.3874388   1.0792642   1.3906667 ]])
+        out_grad   = needle.Tensor([[-0.6561028   0.31842405 -0.66763717]
+ [-2.5158901  -0.85329753  1.5616341 ]
+ [-0.9115753   1.4173585  ...
+ [ 0.7867471  -1.3283548   0.04041772]
+ [-0.91284174 -0.4985536   0.78827906]
+ [-1.1854815  -0.3538665   1.2805634 ]])
+        self       = <needle.ops.Summation object at 0x7f3565ad2dd0>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.Summation object at 0x7f3565ad2dd0>
+out_grad = needle.Tensor([[-0.6561028   0.31842405 -0.66763717]
+ [-2.5158901  -0.85329753  1.5616341 ]
+ [-0.9115753   1.4173585  ...
+ [ 0.7867471  -1.3283548   0.04041772]
+ [-0.91284174 -0.4985536   0.78827906]
+ [-1.1854815  -0.3538665   1.2805634 ]])
+node = needle.Tensor([[ 2.2644234  -0.89700395  0.13111275]
+ [-1.10567    -0.63945633  0.5560729 ]
+ [-0.1460402   0.0876966  ...
+ [ 1.7674885  -0.09478217  0.6280034 ]
+ [ 0.03549606 -0.24754915 -1.1136914 ]
+ [-1.3874388   1.0792642   1.3906667 ]])
+
+    [94mdef[39;49;00m [92mgradient[39;49;00m([96mself[39;49;00m, out_grad, node):[90m[39;49;00m
+        shape = node.inputs[[94m0[39;49;00m].shape[90m[39;49;00m
+    [90m[39;49;00m
+        [90m# Get the out_shape to broadcast[39;49;00m[90m[39;49;00m
+        [94mif[39;49;00m [96mself[39;49;00m.axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            shape_out = [[94m1[39;49;00m [94mfor[39;49;00m i [95min[39;49;00m [96mrange[39;49;00m(shape)][90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            [94mif[39;49;00m [96misinstance[39;49;00m([96mself[39;49;00m.axes, [96mint[39;49;00m):[90m[39;49;00m
+                axes = [[96mself[39;49;00m.axes][90m[39;49;00m
+            [94melse[39;49;00m:[90m[39;49;00m
+                axes = [96mself[39;49;00m.axes[90m[39;49;00m
+            shape_out = shape[90m[39;49;00m
+            [94mfor[39;49;00m index [95min[39;49;00m axes:[90m[39;49;00m
+>               shape_out[index] = [94m1[39;49;00m [90m# have been sumed.[39;49;00m[90m[39;49;00m
+[1m[31mE               TypeError: 'tuple' object does not support item assignment[0m
+
+axes       = [2]
+index      = 2
+node       = needle.Tensor([[ 2.2644234  -0.89700395  0.13111275]
+ [-1.10567    -0.63945633  0.5560729 ]
+ [-0.1460402   0.0876966  ...
+ [ 1.7674885  -0.09478217  0.6280034 ]
+ [ 0.03549606 -0.24754915 -1.1136914 ]
+ [-1.3874388   1.0792642   1.3906667 ]])
+out_grad   = needle.Tensor([[-0.6561028   0.31842405 -0.66763717]
+ [-2.5158901  -0.85329753  1.5616341 ]
+ [-0.9115753   1.4173585  ...
+ [ 0.7867471  -1.3283548   0.04041772]
+ [-0.91284174 -0.4985536   0.78827906]
+ [-1.1854815  -0.3538665   1.2805634 ]])
+self       = <needle.ops.Summation object at 0x7f3565ad2dd0>
+shape      = (8, 3, 2)
+shape_out  = (8, 3, 2)
+
+[1m[31mpython/needle/ops.py[0m:296: TypeError
+[31m[1m___________________ test_broadcast_to[cpu-shape0-shape_to0] ____________________[0m
+
+shape = (1, 1, 1), shape_to = (3, 3, 3), device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape,shape_to[39;49;00m[33m"[39;49;00m, BROADCAST_SHAPES)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_broadcast_to[39;49;00m(shape, shape_to, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       np.testing.assert_allclose(np.broadcast_to(_A, shape_to), ndl.broadcast_to(A, shape_to).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+
+A          = needle.Tensor([[[0.27512822]]])
+_A         = array([[[0.27512822]]], dtype=float32)
+device     = cpu()
+shape      = (1, 1, 1)
+shape_to   = (3, 3, 3)
+
+[1m[31mtests/test_nd_backend.py[0m:201: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:263: in broadcast_to
+    [94mreturn[39;49;00m BroadcastTo(shape)(a)[90m[39;49;00m
+        a          = needle.Tensor([[[0.27512822]]])
+        shape      = (3, 3, 3)
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.Tensor([[[0.27512822]]]),)
+        self       = <needle.ops.BroadcastTo object at 0x7f3565905b90>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.Tensor([[[0.27512822]]]),)
+        op         = <needle.ops.BroadcastTo object at 0x7f3565905b90>
+        tensor     = <[TypeError("object of type 'bool' has no len()") raised in repr()] Tensor object at 0x7f3565905b10>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[TypeError("object of type 'bool' has no len()") raised in repr()] Tensor object at 0x7f3565905b10>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.BroadcastTo object at 0x7f3565905b90>
+a = NDArray([[[0.27512822]]], device=cpu())
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, a: NDArray):[90m[39;49;00m
+>       [94mif[39;49;00m [96mlen[39;49;00m([96mlen[39;49;00m(a.shape) != [96mlen[39;49;00m([96mself[39;49;00m.shape)):[90m[39;49;00m
+[1m[31mE       TypeError: object of type 'bool' has no len()[0m
+
+a          = NDArray([[[0.27512822]]], device=cpu())
+self       = <needle.ops.BroadcastTo object at 0x7f3565905b90>
+
+[1m[31mpython/needle/ops.py[0m:225: TypeError
+[31m[1m___________________ test_broadcast_to[cpu-shape1-shape_to1] ____________________[0m
+
+shape = (4, 1, 6), shape_to = (4, 3, 6), device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape,shape_to[39;49;00m[33m"[39;49;00m, BROADCAST_SHAPES)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_broadcast_to[39;49;00m(shape, shape_to, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+>       np.testing.assert_allclose(np.broadcast_to(_A, shape_to), ndl.broadcast_to(A, shape_to).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+
+A          = needle.Tensor([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.533963...75502056 -0.7153131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]])
+_A         = array([[[-2.1211612 , -0.4047676 ,  0.3647518 ,  0.8753898 ,
+          1.5410359 ,  0.0741415 ]],
+
+       [[-0.6190048... ]],
+
+       [[-0.57161665, -0.27592483,  0.37950477,  1.3368852 ,
+         -0.24746351,  0.82428783]]], dtype=float32)
+device     = cpu()
+shape      = (4, 1, 6)
+shape_to   = (4, 3, 6)
+
+[1m[31mtests/test_nd_backend.py[0m:201: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+[1m[31mpython/needle/ops.py[0m:263: in broadcast_to
+    [94mreturn[39;49;00m BroadcastTo(shape)(a)[90m[39;49;00m
+        a          = needle.Tensor([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.533963...75502056 -0.7153131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]])
+        shape      = (4, 3, 6)
+[1m[31mpython/needle/autograd.py[0m:77: in __call__
+    [94mreturn[39;49;00m Tensor.make_from_op([96mself[39;49;00m, args)[90m[39;49;00m
+        args       = (needle.Tensor([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.53396...502056 -0.7153131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]]),)
+        self       = <needle.ops.BroadcastTo object at 0x7f35658e1b90>
+[1m[31mpython/needle/autograd.py[0m:263: in make_from_op
+    tensor.realize_cached_data()[90m[39;49;00m
+        inputs     = (needle.Tensor([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.53396...502056 -0.7153131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]]),)
+        op         = <needle.ops.BroadcastTo object at 0x7f35658e1b90>
+        tensor     = <[TypeError("object of type 'bool' has no len()") raised in repr()] Tensor object at 0x7f35658e0750>
+[1m[31mpython/needle/autograd.py[0m:103: in realize_cached_data
+    [96mself[39;49;00m.cached_data = [96mself[39;49;00m.op.compute([90m[39;49;00m
+        self       = <[TypeError("object of type 'bool' has no len()") raised in repr()] Tensor object at 0x7f35658e0750>
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <needle.ops.BroadcastTo object at 0x7f35658e1b90>
+a = NDArray([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.5339638  -0....53131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]], device=cpu())
+
+    [94mdef[39;49;00m [92mcompute[39;49;00m([96mself[39;49;00m, a: NDArray):[90m[39;49;00m
+>       [94mif[39;49;00m [96mlen[39;49;00m([96mlen[39;49;00m(a.shape) != [96mlen[39;49;00m([96mself[39;49;00m.shape)):[90m[39;49;00m
+[1m[31mE       TypeError: object of type 'bool' has no len()[0m
+
+a          = NDArray([[[-2.1211612  -0.4047676   0.3647518   0.8753898   1.5410359
+    0.0741415 ]]
+
+ [[-0.61900485  0.5339638  -0....53131
+    0.5565561 ]]
+
+ [[-0.57161665 -0.27592483  0.37950477  1.3368852  -0.24746351
+    0.82428783]]], device=cpu())
+self       = <needle.ops.BroadcastTo object at 0x7f35658e1b90>
+
+[1m[31mpython/needle/ops.py[0m:225: TypeError
+[31m[1m_______________________ test_logsumexp[cpu-shape0-None] ________________________[0m
+
+shape = (1, 1, 1), axes = None, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_logsumexp[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+        A_t = torch.Tensor(_A)[90m[39;49;00m
+        [94mif[39;49;00m axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            t_axes = [96mtuple[39;49;00m([96mlist[39;49;00m([96mrange[39;49;00m([96mlen[39;49;00m(shape))))[90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            t_axes = axes[90m[39;49;00m
+>       np.testing.assert_allclose(torch.logsumexp(A_t, dim=t_axes).numpy(), ndl.logsumexp(A, axes=axes).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+[1m[31mE       TypeError: logsumexp() got an unexpected keyword argument 'axes'[0m
+
+A          = needle.Tensor([[[-0.5395077]]])
+A_t        = tensor([[[-0.5395]]])
+_A         = array([[[-0.5395077]]], dtype=float32)
+axes       = None
+device     = cpu()
+shape      = (1, 1, 1)
+t_axes     = (0, 1, 2)
+
+[1m[31mtests/test_nd_backend.py[0m:239: TypeError
+[31m[1m_________________________ test_logsumexp[cpu-shape1-0] _________________________[0m
+
+shape = (5, 3), axes = 0, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_logsumexp[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+        A_t = torch.Tensor(_A)[90m[39;49;00m
+        [94mif[39;49;00m axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            t_axes = [96mtuple[39;49;00m([96mlist[39;49;00m([96mrange[39;49;00m([96mlen[39;49;00m(shape))))[90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            t_axes = axes[90m[39;49;00m
+>       np.testing.assert_allclose(torch.logsumexp(A_t, dim=t_axes).numpy(), ndl.logsumexp(A, axes=axes).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+[1m[31mE       TypeError: logsumexp() got an unexpected keyword argument 'axes'[0m
+
+A          = needle.Tensor([[ 0.7250658  -0.19577685  0.2609733 ]
+ [ 0.45240352 -0.2548765  -1.6094449 ]
+ [ 2.0941243   0.28460875  0.31296384]
+ [-1.2191344  -1.1221304   1.3478742 ]
+ [-1.7628291  -0.3139097  -0.34780467]])
+A_t        = tensor([[ 0.7251, -0.1958,  0.2610],
+        [ 0.4524, -0.2549, -1.6094],
+        [ 2.0941,  0.2846,  0.3130],
+        [-1.2191, -1.1221,  1.3479],
+        [-1.7628, -0.3139, -0.3478]])
+_A         = array([[ 0.7250658 , -0.19577685,  0.2609733 ],
+       [ 0.45240352, -0.2548765 , -1.6094449 ],
+       [ 2.0941243 ,  ...96384],
+       [-1.2191344 , -1.1221304 ,  1.3478742 ],
+       [-1.7628291 , -0.3139097 , -0.34780467]], dtype=float32)
+axes       = 0
+device     = cpu()
+shape      = (5, 3)
+t_axes     = 0
+
+[1m[31mtests/test_nd_backend.py[0m:239: TypeError
+[31m[1m_________________________ test_logsumexp[cpu-shape2-1] _________________________[0m
+
+shape = (8, 3, 2), axes = 1, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_logsumexp[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+        A_t = torch.Tensor(_A)[90m[39;49;00m
+        [94mif[39;49;00m axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            t_axes = [96mtuple[39;49;00m([96mlist[39;49;00m([96mrange[39;49;00m([96mlen[39;49;00m(shape))))[90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            t_axes = axes[90m[39;49;00m
+>       np.testing.assert_allclose(torch.logsumexp(A_t, dim=t_axes).numpy(), ndl.logsumexp(A, axes=axes).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+[1m[31mE       TypeError: logsumexp() got an unexpected keyword argument 'axes'[0m
+
+A          = needle.Tensor([[[ 0.3302983  -0.340832  ]
+  [ 0.61795366 -0.5573774 ]
+  [ 0.98945314  0.10835913]]
+
+ [[ 1.0003321   1.... ]
+  [-0.42839643  1.8128349 ]]
+
+ [[-0.39105508  1.7389957 ]
+  [-0.1451655  -1.9387268 ]
+  [-0.3850593  -1.0773765 ]]])
+A_t        = tensor([[[ 0.3303, -0.3408],
+         [ 0.6180, -0.5574],
+         [ 0.9895,  0.1084]],
+
+        [[ 1.0003,  1.3745],
+...         [-0.4284,  1.8128]],
+
+        [[-0.3911,  1.7390],
+         [-0.1452, -1.9387],
+         [-0.3851, -1.0774]]])
+_A         = array([[[ 0.3302983 , -0.340832  ],
+        [ 0.61795366, -0.5573774 ],
+        [ 0.98945314,  0.10835913]],
+
+       [...  [[-0.39105508,  1.7389957 ],
+        [-0.1451655 , -1.9387268 ],
+        [-0.3850593 , -1.0773765 ]]], dtype=float32)
+axes       = 1
+device     = cpu()
+shape      = (8, 3, 2)
+t_axes     = 1
+
+[1m[31mtests/test_nd_backend.py[0m:239: TypeError
+[31m[1m_________________________ test_logsumexp[cpu-shape3-2] _________________________[0m
+
+shape = (8, 3, 2), axes = 2, device = cpu()
+
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mshape, axes[39;49;00m[33m"[39;49;00m, SUMMATION_PARAMETERS)[90m[39;49;00m
+    [37m@pytest[39;49;00m.mark.parametrize([33m"[39;49;00m[33mdevice[39;49;00m[33m"[39;49;00m, _DEVICES, ids=[[33m"[39;49;00m[33mcpu[39;49;00m[33m"[39;49;00m, [33m"[39;49;00m[33mcuda[39;49;00m[33m"[39;49;00m])[90m[39;49;00m
+    [94mdef[39;49;00m [92mtest_logsumexp[39;49;00m(shape, axes, device):[90m[39;49;00m
+        _A = np.random.randn(*shape).astype(np.float32)[90m[39;49;00m
+        A = ndl.Tensor(nd.array(_A), device=device)[90m[39;49;00m
+        A_t = torch.Tensor(_A)[90m[39;49;00m
+        [94mif[39;49;00m axes [95mis[39;49;00m [94mNone[39;49;00m:[90m[39;49;00m
+            t_axes = [96mtuple[39;49;00m([96mlist[39;49;00m([96mrange[39;49;00m([96mlen[39;49;00m(shape))))[90m[39;49;00m
+        [94melse[39;49;00m:[90m[39;49;00m
+            t_axes = axes[90m[39;49;00m
+>       np.testing.assert_allclose(torch.logsumexp(A_t, dim=t_axes).numpy(), ndl.logsumexp(A, axes=axes).numpy(), atol=[94m1e-5[39;49;00m, rtol=[94m1e-5[39;49;00m)[90m[39;49;00m
+[1m[31mE       TypeError: logsumexp() got an unexpected keyword argument 'axes'[0m
+
+A          = needle.Tensor([[[-0.3582824   1.2597693 ]
+  [-1.0431324  -1.0910558 ]
+  [-0.58738524 -1.1948036 ]]
+
+ [[ 0.4577148  -1.... ]
+  [-0.62239337  1.524059  ]]
+
+ [[-1.6744863   1.1182188 ]
+  [-2.7329693  -0.0318884 ]
+  [-1.2050631  -0.48431998]]])
+A_t        = tensor([[[-0.3583,  1.2598],
+         [-1.0431, -1.0911],
+         [-0.5874, -1.1948]],
+
+        [[ 0.4577, -1.1173],
+...         [-0.6224,  1.5241]],
+
+        [[-1.6745,  1.1182],
+         [-2.7330, -0.0319],
+         [-1.2051, -0.4843]]])
+_A         = array([[[-0.3582824 ,  1.2597693 ],
+        [-1.0431324 , -1.0910558 ],
+        [-0.58738524, -1.1948036 ]],
+
+       [...  [[-1.6744863 ,  1.1182188 ],
+        [-2.7329693 , -0.0318884 ],
+        [-1.2050631 , -0.48431998]]], dtype=float32)
+axes       = 2
+device     = cpu()
+shape      = (8, 3, 2)
+t_axes     = 2
+
+[1m[31mtests/test_nd_backend.py[0m:239: TypeError
+[36m[1m=========================== short test summary info ============================[0m
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_matmul[cpu-16-16-32][0m - AssertionError: 
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_tanh_backward[cpu-shape1][0m - assert 16.637247050113633 < 0.42
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack[cpu-shape0-0-1][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack[cpu-shape1-0-2][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack[cpu-shape2-2-5][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack_backward[cpu-shape0-0-1][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack_backward[cpu-shape1-0-2][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_stack_backward[cpu-shape2-2-5][0m - NotImplementedError
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_summation_backward[cpu-shape0-None][0m - TypeError: 'tuple' object cannot be interpreted as an integer
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_summation_backward[cpu-shape1-0][0m - TypeError: 'tuple' object does not support item assignment
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_summation_backward[cpu-shape2-1][0m - TypeError: 'tuple' object does not support item assignment
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_summation_backward[cpu-shape3-2][0m - TypeError: 'tuple' object does not support item assignment
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_broadcast_to[cpu-shape0-shape_to0][0m - TypeError: object of type 'bool' has no len()
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_broadcast_to[cpu-shape1-shape_to1][0m - TypeError: object of type 'bool' has no len()
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_logsumexp[cpu-shape0-None][0m - TypeError: logsumexp() got an unexpected keyword argument 'axes'
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_logsumexp[cpu-shape1-0][0m - TypeError: logsumexp() got an unexpected keyword argument 'axes'
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_logsumexp[cpu-shape2-1][0m - TypeError: logsumexp() got an unexpected keyword argument 'axes'
+[31mFAILED[0m tests/test_nd_backend.py::[1mtest_logsumexp[cpu-shape3-2][0m - TypeError: logsumexp() got an unexpected keyword argument 'axes'
+[31m========== [31m[1m18 failed[0m, [32m41 passed[0m, [33m59 skipped[0m, [33m1685 deselected[0m[31m in 2.41s[0m[31m ==========[0m
